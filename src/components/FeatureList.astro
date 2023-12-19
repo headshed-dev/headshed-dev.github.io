@@ -1,0 +1,47 @@
+---
+import Heading from "./Heading.astro";
+
+const heading = "What Headshed is about";
+
+
+
+const sections = [
+  "Second Brain",
+  "Content Delivery",
+  "Automation",
+  
+];
+const sectionsText = [
+  "How we can organize thoughts and ideas into a digital 2nd brain. Sometimes called a vault, a single source of personal truth.",
+  "Means and methods of access. These differ for the data owner(s) as opposed to that of extended audiences.",
+  "Mechanisation is key to success. We automate processes to save time, effort and reduce or eliminate error.",
+];
+
+
+---
+
+<div class="mb-12 bg-stone-100 dark:bg-slate-800">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+    <!-- <Heading heading={heading} /> -->
+    <div
+      class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0"
+    >
+      {
+        sections.map((section) => {
+          return (
+            <div class="flex flex-col">
+              <div class="mt-6">
+                <h3 class="text-lg font-medium text-gray-900 dark:text-white">
+                  {sections[sections.indexOf(section)]}
+                </h3>
+                <p class="mb-8 mt-2 text-lg text-gray-700 dark:text-gray-400">
+                  {sectionsText[sections.indexOf(section)]}
+                </p>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</div>

@@ -38,20 +38,23 @@ import data from "../data/site.json";
   <body>
     <div class="bg-stone-100 dark:bg-slate-800 min-h-screen">
       <Nav />
-      <div class="container max-w-4xl">
+      <div class="container">
+        <section class="section ml-20 mr-20">
+          <h1 class="text-4xl font-bold">{title}</h1>
         <slot />
+        </section>
         <Footer />
       </div>
     </div>
     <style>
       .container {
-        /* max-width: 1280px; */
+        max-width: 1280px;
         margin: 0 auto;
         padding: 1rem;
       }
-      .section {
+      /* .section {
         padding: 60px 0;
-      }
+      } */
       #footer {
         position: fixed;
       }

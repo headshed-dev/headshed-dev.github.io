@@ -1,32 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+
+import Header from "../components/Header.astro";
+import CTA from "../components/CTA.astro";
+import FeatureList from "../components/FeatureList.astro";
+
+import Timeline from "../components/Timeline.astro";
+
+import data from "../data/site.json";
 ---
 
-<Layout title="Welcome to Headshed.">
-	<main class="flex flex-col justify-center items-center h-screen">
-		<h1 class="text-4xl m-5">
-			Welcome to <span class="text-gradient">Headshed</span>
-		</h1>
-
-		<div class="mx-auto">
-			<img
-				class="w-56"
-				src="/fp-headshed-dev.png"
-				alt="Headshed"
-				height="auto"
-			/>
-		</div>
-
-		<p class="m-5">
-			where the 
-			<a href="https://github.com/headshed-dev"><code>code</code> lives</a>
-			
-			<a href="https://ajbc.co">
-				 for ajbc.co
-			</p>
-		</a>
-	</main>
+<Layout title={data.siteName}>
+  <main>
+    <Header />
+    <!-- <CTA /> -->
+    <FeatureList />
+    <!-- <Timeline /> -->
+  </main>
 </Layout>
-
-<style></style>
