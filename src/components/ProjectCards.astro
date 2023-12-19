@@ -1,0 +1,54 @@
+---
+import ButtonGroup from "./ButtonGroup.astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  projectTitle: string;
+  body: string;
+  href: string;
+  type?: string;
+  repo?: string;
+  external?: boolean;
+  featuredImage?: string;
+}
+
+const { href, projectTitle, body, type, repo, featuredImage } = Astro.props;
+---
+
+<div
+  class="bg-gray-50 dark:bg-gray-900 border border-gray-200 shadow-lg dark:border-gray-700 rounded-lg"
+>
+
+
+  <Image
+    width="200"
+    height="200"
+    class="w-full"
+    src={featuredImage ? `/images/${featuredImage}` : '/images/waving.png'}
+
+    alt="Python in a jungle"
+  />
+
+  <div class="px-8 py-8">
+    {
+      type && (
+        <span class="bg-primary text-white text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-blue-100 mb-2">
+          {type}
+        </span>
+      )
+    }
+    <h2 class="text-gray-900 dark:text-white text-3xl font-extrabold mb-2">
+      {projectTitle}
+    </h2>
+    <p class="text-lg font-normal text-gray-700 dark:text-gray-400 mb-4">
+      {body}
+    </p>
+    <!-- <ButtonGroup text1="More Info" href1={href} text2="Code Repo" href2={repo}  /> -->
+    <a href={href}>
+      <button
+        class="justify-center items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white"
+        type="button">Read more &hellip;</button
+      >
+    </a>
+  </div>
+</div>

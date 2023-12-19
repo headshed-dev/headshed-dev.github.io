@@ -1,0 +1,80 @@
+{
+  "owner": "Headshed",
+  "siteName": "headshed.dev",
+  "siteDescription": "this is the headshed project",
+  "about": "2nd brain enthsuiast, full stack developer, and all around good folk.",
+  "contact": {
+    "email": "jon@ajb.co",
+    "phone": "555-555-5555",
+    "address": "Birmingham, UK"
+  },
+  "pages": [
+    {
+      "title": "Home",
+      "href": "/"
+    },
+    {
+      "title": "Uploadz",
+      "href": "/uploadz"
+    }
+  ],
+  "social": [
+    {
+      "title": "GitHub",
+      "href": "https://github.com/headshed-dev"
+    },
+    {
+      "title": "AJBC Services",
+      "href": "https://www.ajbc.co"
+    },
+    {
+      "title": "LinkedIn",
+      "href": "https://www.linkedin.com/company/100384014"
+    }
+  ],
+  "articles": [
+    {
+      "projectTitle": "Build a Second Brain",
+      "href": "/uploadz/python-virtual-environments",
+      "about": "Get a start on your 2nd brain with Logseq and GitHub.",
+      "type": "2nd Brain, Logseq, GitHub",
+      "repo": "https://github.com",
+      "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg",
+      "featuredImage": "robot-head03.jpeg",
+      "featured": true
+    },
+    {
+      "projectTitle": "Astro Static Site Generator",
+      "href": "/uploadz/python-virtual-environments",
+      "about": "Static site generator for the masses.",
+      "type": "Astro, SSG",
+      "repo": "https://github.com",
+      "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg",
+      "featuredImage": "astro-saucer.png",
+      "featured": true
+    },
+
+    {
+      "projectTitle": "Python Virtual Environments",
+      "href": "/uploadz/python-virtual-environments",
+      "about": "Different ways to create and manage Python virtual environments.",
+      "type": "Python, Shell",
+      "repo": "https://github.com",
+      "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg",
+      "featuredImage": "python03.jpeg",
+      "featured": true
+    },
+
+    {
+      "projectTitle": "Get going with Docker Containers",
+      "href": "/uploadz/python-virtual-environments",
+      "about": "What can we usefully do with docker on a laptop or workstation.",
+      "type": "Docker, Containers",
+      "repo": "https://github.com",
+      "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg",
+      "featuredImage": "container.jpeg",
+      "featured": true
+    }
+      
+  ]
+}

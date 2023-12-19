@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import HeaderSmall from "../components/HeaderSmall.astro";
+import Form from "../components/Form.astro";
+const title = "Contact";
+const subtitle = "Contact me using the form below. Or find me online!";
+---
+
+<Layout title="Contact">
+  <div>
+    <HeaderSmall title={title} subtitle={subtitle} />
+  </div>
+  <main>
+    <div class="max-w-md m-auto my-8">
+      <Form />
+    </div>
+  </main>
+</Layout>
+
+<style></style>
