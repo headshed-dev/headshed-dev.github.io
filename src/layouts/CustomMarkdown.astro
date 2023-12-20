@@ -1,14 +1,24 @@
 ---
-interface Props {
-  title: string;
-}
+const AstroNamespace = (Astro as any);
 
-const { title } = Astro.props;
+// interface Props {
+//   content: Astro.AstroMarkdownContent;
+// }
+
+// const props = (Astro as any).props as Props;
+const props = AstroNamespace.props;
+const { content } = props;
+
+
+
 import { ViewTransitions } from "astro:transitions";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 
 import data from "../data/site.json";
+console.log(content.title);
+const imgPath = `/images/${content.image}`;
+console.log(imgPath);
 ---
 
 <!doctype html>
@@ -20,12 +30,21 @@ import data from "../data/site.json";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
-    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css"
+    />
+    <title>{content.title}</title>
     <script is:inline>
       //check for dark mode in local storage using the theme var
       if (localStorage.getItem("theme") === "dark") {
@@ -38,12 +57,25 @@ import data from "../data/site.json";
   <body>
     <div class="bg-stone-100 dark:bg-slate-800 min-h-screen">
       <Nav />
-      <div class="container">
-        <section class="section ml-20 mr-20">
-          <h1 class="text-4xl font-bold">{title}</h1>
-        <slot />
+      <div class="flex justify-center mx-4">
+        <section class="section max-w-4xl">
+          <h1 class="text-4xl font-bold mb-5 text-gray-900 dark:text-white">{content.title} </h1>
+          <img src={imgPath} alt="featured image" class="w-36 rounded-lg pb-10"/>
+          <main class="pb-10">
+            <container class="markdown">
+              <div
+                class="prose dark:prose-invert
+                prose-h1:font-bold prose-h1:text-2xl
+                prose-h2:font-bold prose-h2:text-xl
+                prose-a:text-red-600 prose-p:text-justify prose-img:rounded-xl
+                  prose-headings:bold"
+              >
+                <slot />
+              </div>
+            </container>
+          </main>
+          <Footer />
         </section>
-        <Footer />
       </div>
     </div>
     <style>
@@ -52,9 +84,9 @@ import data from "../data/site.json";
         margin: 0 auto;
         padding: 1rem;
       }
-      /* .section {
+      .section {
         padding: 60px 0;
-      } */
+      }
       #footer {
         position: fixed;
       }
@@ -70,6 +102,18 @@ import data from "../data/site.json";
           position: relative;
         }
       }
+    </style>
+
+    <style is:inline>
+      .markdown pre {
+        border-radius: 0.25rem;
+        padding: 1rem;
+        overflow-x: auto;
+      }
+
+ 
+
+      
     </style>
   </body>
 </html>

@@ -1,13 +1,12 @@
 ---
-layout: ../../layouts/CustomMarkdown.astro
-title: Hello, World
+layout: "../../layouts/CustomMarkdown.astro"
+title: "python virtual environments"
 ---
 
 # Hi there!
 
 This Markdown file creates a page at `your-domain.com/page-1/`
 
-## another heading level 2
 
 lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget ultricies ultricies, nunc nisl aliquam nunc, quis aliquam lorem nisl nec nisi
 
@@ -36,37 +35,3 @@ for (let i = 0; i < 10; i++) {
 
 ```
 
-<style>
-
-h1 {
-      font-size: 1.5rem/* 24px */;
-    line-height: 2rem/* 32px */;
-        font-weight: 700;
-
-
-}
-
-h1, h2, .dark p, .dark li {
-    --tw-text-opacity: 1;
-    color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-
-.dark h1, h2, .dark p, .dark li {
-    --tw-text-opacity: 1;
-    color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-
-pre {
-    padding: 1rem;
-    border-radius: 0.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-p {
-    line-height: 1.5rem/* 24px */;
-w    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-</style>
