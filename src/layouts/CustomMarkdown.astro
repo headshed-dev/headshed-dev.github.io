@@ -1,5 +1,5 @@
 ---
-const AstroNamespace = (Astro as any);
+const AstroNamespace = Astro as any;
 
 // interface Props {
 //   content: Astro.AstroMarkdownContent;
@@ -8,8 +8,6 @@ const AstroNamespace = (Astro as any);
 // const props = (Astro as any).props as Props;
 const props = AstroNamespace.props;
 const { content } = props;
-
-
 
 import { ViewTransitions } from "astro:transitions";
 import Nav from "../components/Nav.astro";
@@ -59,8 +57,14 @@ console.log(imgPath);
       <Nav />
       <div class="flex justify-center mx-4">
         <section class="section max-w-4xl">
-          <h1 class="text-4xl font-bold mb-5 text-gray-900 dark:text-white">{content.title} </h1>
-          <img src={imgPath} alt="featured image" class="w-36 rounded-lg pb-10"/>
+          <h1 class="text-4xl font-bold mb-5 text-gray-900 dark:text-white">
+            {content.title}
+          </h1>
+          <img
+            src={imgPath}
+            alt="featured image"
+            class="w-36 rounded-lg pb-10"
+          />
           <main class="pb-10">
             <container class="markdown">
               <div
@@ -74,9 +78,9 @@ console.log(imgPath);
               </div>
             </container>
           </main>
-          <Footer />
         </section>
       </div>
+      <Footer />
     </div>
     <style>
       .container {
@@ -101,19 +105,16 @@ console.log(imgPath);
         footer {
           position: relative;
         }
-      }
+      } 
     </style>
 
     <style is:inline>
       .markdown pre {
         border-radius: 0.25rem;
         padding: 1rem;
-        overflow-x: auto;
+        overflow-x: scroll;
+        white-space: pre-wrap;
       }
-
- 
-
-      
     </style>
   </body>
 </html>
