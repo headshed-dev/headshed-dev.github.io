@@ -2,6 +2,8 @@
 import ButtonGroup from "./ButtonGroup.astro";
 import { Image } from "astro:assets";
 
+
+
 interface Props {
   projectTitle: string;
   body: string;
@@ -9,25 +11,24 @@ interface Props {
   type?: string;
   repo?: string;
   external?: boolean;
-  featuredImage?: string;
+  featuredImage: string;
 }
 
 const { href, projectTitle, body, type, repo, featuredImage } = Astro.props;
+
+
+let imagePath = `/images/${featuredImage}`;
+
+
+
 ---
 
 <div
   class="bg-gray-50 dark:bg-gray-900 border border-gray-200 shadow-lg dark:border-gray-700 rounded-lg"
 >
 
+<img src={imagePath} alt={projectTitle} class="w-full  object-cover rounded-t-lg" />
 
-  <Image
-    width="200"
-    height="200"
-    class="w-full"
-    src={featuredImage ? `/images/${featuredImage}` : '/images/waving.png'}
-
-    alt="Python in a jungle"
-  />
 
   <div class="px-8 py-8">
     {
