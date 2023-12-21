@@ -41,7 +41,7 @@
       "type": "markdown, routines, habits",
       "repo": "https://github.com",
       "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg",
-      "featuredImage": "keyboard01.jpeg",
+      "featuredImage": "keyboard01.webp",
       "featured": true
     },
 
@@ -52,7 +52,7 @@
       "type": "2nd Brain, Logseq, GitHub",
       "repo": "https://github.com",
       "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg",
-      "featuredImage": "robot-head03.jpeg",
+      "featuredImage": "robot-head03.webp",
       "featured": true
     },
     {
@@ -62,7 +62,7 @@
       "type": "Astro, SSG",
       "repo": "https://github.com",
       "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg",
-      "featuredImage": "astro-saucer.png",
+      "featuredImage": "astro-saucer.webp",
       "featured": true
     },
 
@@ -75,7 +75,7 @@
       "type": "Docker, Containers",
       "repo": "https://github.com",
       "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg",
-      "featuredImage": "container.jpeg",
+      "featuredImage": "container.webp",
       "featured": true
     },
     {
@@ -85,7 +85,7 @@
       "type": "Python, Shell",
       "repo": "https://github.com",
       "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg",
-      "featuredImage": "python03.jpeg",
+      "featuredImage": "python03.webp",
       "featured": true
     }
       
