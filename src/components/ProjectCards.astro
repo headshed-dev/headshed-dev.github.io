@@ -24,8 +24,9 @@ let imagePath = `/images/${featuredImage}`;
 ---
 
 <div
-  class="bg-gray-50 dark:bg-gray-900 border border-gray-200 shadow-lg dark:border-gray-700 rounded-lg"
+class="bg-gray-50 dark:bg-gray-900 border border-gray-200 shadow-lg dark:border-gray-700 rounded-lg"
 >
+<a href={href}>
 
 <img src={imagePath} alt={projectTitle} class="w-full  object-cover rounded-t-lg" />
 
@@ -45,11 +46,10 @@ let imagePath = `/images/${featuredImage}`;
       {body}
     </p>
     <!-- <ButtonGroup text1="More Info" href1={href} text2="Code Repo" href2={repo}  /> -->
-    <a href={href}>
       <button
         class="justify-center items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white"
         type="button">Read more &hellip;</button
       >
-    </a>
-  </div>
+    </div>
+  </a>
 </div>
