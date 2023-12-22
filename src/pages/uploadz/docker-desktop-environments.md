@@ -79,12 +79,16 @@ then run the script
 
 ```bash
 sh run.sh
+025ee830474d95178e330f61192ebec4032891e913aebe8d24a4de9c26a82b2a
 ```
 
 the container is now running and we can check this with
 
 ```
 ❯ docker ps
+CONTAINER ID   IMAGE                                COMMAND   CREATED          STATUS          PORTS                    NAMES
+025ee830474d   lscr.io/linuxserver/wikijs:2.5.300   "/init"   57 seconds ago   Up 56 seconds   0.0.0.0:3000->3000/tcp   wikijs
+
 ```
 
 we will also see that there are 2 directories created in the current directory, `config` and `data` and these are where the configuration and data for the container are stored
