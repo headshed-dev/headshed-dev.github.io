@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/CustomMarkdown.astro"
-title: "Markdown Writing Habits"
+title: "Get writing with Markdown"
 image: "keyboard01.jpeg"
 ---
 

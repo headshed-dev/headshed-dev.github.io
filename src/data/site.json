@@ -44,7 +44,16 @@
       "featuredImage": "keyboard01.webp",
       "featured": true
     },
-
+    {
+      "projectTitle": "Conquer your fear of the command line",
+      "href": "/uploadz/command-line-fear",
+      "about": "It is here to help us, embrace the shell.",
+      "type": "OS, shell, terminal, command line",
+      "repo": "https://github.com",
+      "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg",
+      "featuredImage": "frightened-robot.webp",
+      "featured": true
+    },
     {
       "projectTitle": "Build a Second Brain",
       "href": "/uploadz/python-virtual-environments",
@@ -70,7 +79,7 @@
 
     {
       "projectTitle": "Get going with Docker Containers",
-      "href": "/uploadz/python-virtual-environments",
+      "href": "/uploadz/docker-desktop-environments",
       "about": "What can we usefully do with docker on a laptop or workstation.",
       "type": "Docker, Containers",
       "repo": "https://github.com",
