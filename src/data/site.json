@@ -56,7 +56,7 @@
     },
     {
       "projectTitle": "Build a Second Brain",
-      "href": "/uploadz/python-virtual-environments",
+      "href": "/uploadz/second-brain-getting-started",
       "about": "Get a start on your 2nd brain with Logseq and GitHub.",
       "type": "2nd Brain, Logseq, GitHub",
       "repo": "https://github.com",
@@ -66,7 +66,7 @@
     },
     {
       "projectTitle": "Astro Static Site Generator",
-      "href": "/uploadz/python-virtual-environments",
+      "href": "/uploadz/astro-static-site-generator",
       "about": "Static site generator for the masses.",
       "type": "Astro, SSG",
       "repo": "https://github.com",
@@ -74,9 +74,6 @@
       "featuredImage": "astro-saucer.webp",
       "featured": true
     },
-
- 
-
     {
       "projectTitle": "Get going with Docker Containers",
       "href": "/uploadz/docker-desktop-environments",

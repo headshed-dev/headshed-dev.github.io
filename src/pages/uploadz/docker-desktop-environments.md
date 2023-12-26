@@ -8,7 +8,24 @@ image: "container.webp"
 
 [Install Docker](https://www.docker.com/products/docker-desktop/)
 
-edit a `run.sh` file and run it with `sh run.sh`
+edit a `run.sh` file containing something like this :
+
+```bash
+docker run -d \
+  --name=wikijs \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=Europe/London \
+  -e DB_TYPE=sqlite \
+  -p 3000:3000 \
+  -v $(pwd)/config:/config \
+  -v $(pwd)/data:/data \
+  --restart unless-stopped \
+  lscr.io/linuxserver/wikijs:2.5.300
+
+```
+
+and run it with `sh run.sh`
 
 access a local wiki.js instance at `http://localhost:3000`
 
@@ -21,7 +38,7 @@ access a local wiki.js instance at `http://localhost:3000`
 
 # Install and run a container
 
-Lets install an application that is a wiki, a place to store and share information, notes, knowledge base, etc.
+Lets install an application that is a wiki, a place in which we may store and share information, notes, knowledge base, etc. but this will be for our own, private and local use for now.
 
 wiki.js is a modern, lightweight and powerful wiki app built on Node.js, Git and Markdown. It runs on the blazing fast Node.js runtime environment to provide a powerful wiki app to document your projects, Git repositories, notes, knowledge base, etc.
 
@@ -54,7 +71,7 @@ REPOSITORY                   TAG       IMAGE ID       CREATED      SIZE
 lscr.io/linuxserver/wikijs   2.5.300   869729f6d3c5   7 days ago   441MB
 ```
 
-Creating a shell script file called `run.sh` with the following contents
+Now we can create a shell script file called `run.sh` with the following contents
 
 ```bash
 
@@ -75,14 +92,14 @@ Be sure to change `TZ` to your timezone, and change the `PUID` and `PGID` to you
 
 Also, the port 3000 needs changed if you already have something running on that port. To change the port, change the first number in `-p 3000:3000` to whatever port you want to use.
 
-then run the script
+We can run the script now:
 
 ```bash
 sh run.sh
 025ee830474d95178e330f61192ebec4032891e913aebe8d24a4de9c26a82b2a
 ```
 
-the container is now running and we can check this with
+When the container is running we can check this with
 
 ```
 ❯ docker ps
@@ -91,17 +108,17 @@ CONTAINER ID   IMAGE                                COMMAND   CREATED          S
 
 ```
 
-we will also see that there are 2 directories created in the current directory, `config` and `data` and these are where the configuration and data for the container are stored
+There are 2 directories created in the current directory, `config` and `data` and these are where the configuration and data for the container are stored :
 
 ```bash
 ❯ ls
 config  data  run.sh
 ```
-open a browser and navigate to `http://localhost:3000` and you will be presented with the wiki.js install prompt
+Next, open a browser and navigate to `http://localhost:3000` and you will be presented with the wiki.js install prompt
 
 ![Wiki JS Install prompt](/images/wiki-js-install.webp)
 
-As this is for local development for now, we can use the following
+As this is for local hosting and development work for now, we can use the following
 
 | Field | Value |
 | --- | --- |
@@ -115,3 +132,5 @@ On completion of the install, you will be presented with the wiki.js welome page
 Pages are by default created using Markdown, which is my preference as this translates to other media easily.
 
 We now have a local only, private copy of our own wiki.js instance running in a container on our local machine.
+
+Wikis are great for storing and sharing information, notes, knowledge base, etc. They were amongst the first ways of easily managing knowlege in a way that was easy to add to and modify, even search and index. Before Wikis, often web sites required greater knowledge of HTML and CSS to create and maintain and were not as easy to share and collaborate on. Wikimedia, the company behind Wikipedia, the online encyclopedia, have made history with their work and have made it possible for anyone to create and share information in a way that is easy to use and access. Thankyou Wikimedia.
