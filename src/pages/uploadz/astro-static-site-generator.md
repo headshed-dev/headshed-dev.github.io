@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/CustomMarkdown.astro"
-title: "python virtual environments"
+title: "Astro Static Site Generator"
 image: astro-saucer.webp
 ---
 
