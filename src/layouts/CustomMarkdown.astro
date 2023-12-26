@@ -55,39 +55,38 @@ console.log(imgPath);
   <body>
     <div class="bg-stone-100 dark:bg-slate-800 min-h-screen pt-20">
       <Nav />
-      <div class="flex justify-center mx-4">
-        <section class="section max-w-4xl">
-          <h1 class="text-4xl font-bold mb-5 text-gray-900 dark:text-white">
-            {content.title}
-          </h1>
-          <img
-            src={imgPath}
-            alt="featured image"
-            class="w-2/3 rounded-lg pb-10 mx-auto"
-          />
-          <main class="pb-10">
-            <container class="markdown">
-              <div
-                class="m-5
-                prose dark:prose-invert
+      <div class="container max-w-4xl">
+        <h1
+          class="text-4xl font-bold mb-5 text-gray-900 dark:text-white text-center pb-5"
+        >
+          {content.title}
+        </h1>
+        <img
+          src={imgPath}
+          alt="featured image"
+          class="w-2/3 rounded-lg pb-10 mx-auto"
+        />
+        <div class="flex flex-col justify-center">
+          <div
+            class="prose dark:prose-invert
+                mx-auto
+                mb-10
                 prose-h1:font-bold prose-h1:text-2xl
                 prose-h2:font-bold prose-h2:text-xl
                 prose-a:text-red-800 dark:prose-a:text-white
                 prose-p:text-justify prose-img:rounded-xl
                 prose-img:shadow-xl prose-img:my-10 prose-img:mx-auto prose-img:pb-10
                 prose-img:max-w-full prose-img:h-auto"
-              >
-                <slot />
-              </div>
-            </container>
-          </main>
-        </section>
+          >
+            <slot />
+          </div>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
     <style>
       .container {
-        max-width: 1280px;
+        /* max-width: 1280px; */
         margin: 0 auto;
         padding: 1rem;
       }
