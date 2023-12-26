@@ -15,9 +15,14 @@ import DarkModeToggle from "./DarkModeToggle.astro";
     <a href="/">
       <span
         class="self-center text-xl  whitespace-nowrap dark:text-white"
-        >{data.siteName}</span
+        >
+        <div class="flex items-center">
+          <img class="h-5 w-5 mr-2 dark:hidden" src="/images/headshed-dev-plain-light.svg" alt="dashboard image">
+          <img class="h-5 w-5 mr-2 hidden dark:block" src="/images/headshed-dev-plain-dark.svg" alt="dashboard image">
+         {data.siteName}</span
       >
     </a>
+    </div>
    
     <button
       data-collapse-toggle="navbar-default"
