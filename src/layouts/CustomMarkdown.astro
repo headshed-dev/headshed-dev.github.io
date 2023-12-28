@@ -51,6 +51,20 @@ console.log(imgPath);
         document.documentElement.classList.remove("dark");
       }
     </script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      is:inline
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-N1DFMGZR4K"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-N1DFMGZR4K");
+    </script>
   </head>
   <body>
     <div class="bg-stone-100 dark:bg-slate-800 min-h-screen pt-20">
