@@ -1,0 +1,43 @@
+---
+// import the Image component and the image
+import { Image } from "astro:assets";
+import darkImage from "../assets/cta-dashboard-mockup-dark.svg";
+import lightImage from "../assets/cta-dashboard-mockup.svg";
+import Button from "../components/Button.astro";
+const title = "Headshed Uploads";
+const body =
+    "A journey begins. This isn't a static knowledge base, it's a living lab where ideas evolve into reality. Think workshop and megaphone in one, amplifying your voice and turning potential into impact. Join us as we weave together tools and stories, crafting personal digital AI presences that rewrite the rules of human-machine collaboration.";
+
+import robotImg from "../images/waving.png";
+---
+
+<section class="mb-12 bg-stone-100 dark:bg-slate-800">
+    <a href="/uploadz">
+        <div
+            class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6"
+        >
+            <!-- <Image src={darkImage} class="w-full hidden dark:block" alt="A description of my image." />
+        <Image src={lightImage} class="w-full dark:hidden border-solid border-2" alt="A description of my image." /> -->
+            <Image
+                src={robotImg}
+                alt="A waving robot"
+                class="w-full border-solid border-2"
+                width={500}
+                height={500}
+            />
+            <div class="mt-4 md:mt-0">
+                <h2
+                    class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+                >
+                    {title}
+                </h2>
+                <p class="mb-8 mt-2 text-lg text-gray-700 dark:text-gray-400">
+                    {body}
+                </p>
+                <div class="mt-5 flex items-center justify-center gap-x-6">
+                    <Button text="Uploadz !" href="/uploadz" />
+                </div>
+            </div>
+        </div>
+    </a>
+</section>
