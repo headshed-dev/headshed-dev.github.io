@@ -6,7 +6,12 @@ created: 2023-12-20
 updated: 2023-12-22
 author: "Jon"
 tags: ["markdown", "writing", "journal", "notes", "blog"]
-description: "Get writing with Markdown"
+description: |
+    Markdown is a simple markup language that allows you to write plain text that can be converted to HTML. It's a great way to write notes, journals, and blog posts.
+
+    You can concentrate on the content, and not worry about the formatting. This is sometimes called "WYSIWYM" (What You See Is What You Mean) but I like to call it 'distraction free writing'. Gone are the days of fiddling with fonts, margins, and spacing in Word or Google Docs. Remember WordPerfect? I do, and I don't miss it.
+
+    So you dont need to write anything other than plain text, but you can add formatting if you want to. You can add headings, images, links and more.
 keywords: "markdown, writing, journal, notes, blog"
 ---
 
