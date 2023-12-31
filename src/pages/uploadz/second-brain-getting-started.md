@@ -5,12 +5,12 @@ image: "robot-head03.webp"
 created: 2023-12-26
 updated: 2023-12-26
 author: "Jon"
-tags: ["second brain", "logseq", "knowledge base", "journal", "notes", "ideas", "thoughts", "tldr"]
-description: "Build a Second Brain"
+tags: ["second-brain", "logseq"]
+description: "logseq is a local-first, non-linear, outliner notebook for organizing and sharing your personal knowledge base and an excellent way to build a second brain"
 keywords: "second brain, logseq, knowledge base, journal, notes, ideas, thoughts, tldr"
 ---
 
-# TLDR
+# TL;DR
 
 Have somewhere you store daily journal entries, notes, ideas, thoughts, etc. and have it be searchable, linkable, taggable, etc.
 
@@ -20,7 +20,7 @@ enjoy !
 
 # Logseq
 
-[Logseq](https://logseq.com/) is a local-first, non-linear, outliner notebook for organizing and sharing your personal knowledge base.
+[Logseq](https://logseq.com/) is a local-first, non-linear, outliner notebook for organizing and sharing your personal knowledge base and an excellent way to build a second brain.
 
 Getting started with this is as simple as running the application and creating journal entries daily. You will quiclky build a knowledge base of your own that is searchable, linkable, taggable, etc.
 

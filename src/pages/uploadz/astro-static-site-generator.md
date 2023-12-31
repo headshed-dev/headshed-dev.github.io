@@ -5,8 +5,8 @@ image: astro-saucer.webp
 created: 2023-12-23
 updated: 2023-12-26
 author: "Jon"
-tags: ["astro", "static site generator", "ssg", "react", "svelte", "vue", "gatsby", "nextjs", "nuxtjs", "sapper", "sveltekit", "vite", "snowpack", "webpack", "tailwind", "tailwindcss", "tailwindui", "tailblocks", "tailwindcomponents", "tailwindtoolbox", "tailwindtemplates", "tailwindstarterkit", "tailwindadmin"]
-description: "Astro Static Site Generator"
+tags: ["astro", "static-sites"]
+description: "Astro is a relatively new static site generator. It has its own approach to building static sites and has a component based approach that is similar to React."
 keywords: "astro, static site generator, ssg, react, svelte, vue, gatsby, nextjs, nuxtjs, sapper, sveltekit, vite, snowpack, webpack, tailwind, tailwindcss, tailwindui, tailblocks, tailwindcomponents, tailwindtoolbox, tailwindtemplates, tailwindstarterkit, tailwindadmin"
 ---
 

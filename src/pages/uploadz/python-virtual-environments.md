@@ -5,8 +5,8 @@ image: python03.webp
 created: 2023-12-19
 updated: 2023-12-26
 author: "Jon"
-tags: ["python", "virtualenv", "venv", "docker", "vscode"]
-description: "python virtual environments"
+tags: ["python", "devops"]
+description: "Python virtual environments isolate projects, letting you use different Python versions and packages without conflicts"
 keywords: "python, virtualenv, venv, docker, vscode"
 ---
 
@@ -40,7 +40,7 @@ Whilst Python is a programming language that is used in many different fields su
 
 # What is a virtual environment?
 
-A virtual environment is a way to isolate a python project from the rest of the system. It is a way to have different versions of python and different versions of python packages installed on the same system without them interfering with each other.
+Python virtual environments isolate projects, letting you use different Python versions and packages without conflicts.
 
 # Why use a virtual environment?
 

@@ -5,7 +5,7 @@ image: "keyboard01.jpeg"
 created: 2023-12-20
 updated: 2023-12-22
 author: "Jon"
-tags: ["markdown", "writing", "journal", "notes", "blog"]
+tags: ["markdown", "writing"]
 description: "Markdown is a simple markup language that allows you to write plain text that can be converted to HTML. It's a great way to write notes, journals, and posts."
 keywords: "markdown, writing, journal, notes, blog"
 ---

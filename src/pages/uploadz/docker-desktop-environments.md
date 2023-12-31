@@ -6,11 +6,11 @@ created: 2023-12-22
 updated: 2023-12-26
 author: "Jon"
 tags: ["docker", "containers"]
-description: "Get going with Docker Containers"
+description: "install a containerised application in which we may store information, notes, knowledge base, etc. but this will be for our own, private and local use "
 keywords: "docker, containers"
 ---
 
-# TLDR
+# TL;DR
 
 [Install Docker](https://www.docker.com/products/docker-desktop/)
 
