@@ -10,8 +10,10 @@ import Footer from "../components/Footer.astro";
 import BlogPostingJSONLD from "../components/BlogPostingJSONLD.astro";
 
 const imgPath = `/images/${content.image}`;
----
 
+import data from "../data/site.json";
+---
+{
 <!doctype html>
 <html lang="en">
   <head>
@@ -19,6 +21,7 @@ const imgPath = `/images/${content.image}`;
     <meta charset="UTF-8" />
     <meta name="description" content={content.description} />
     <SEO
+      canonical={data.site}
       title={content.title}
       description={content.description}
       openGraph={{

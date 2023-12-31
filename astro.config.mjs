@@ -6,6 +6,7 @@ import { remarkReadingTime } from "./src/utills/readingtime";
 const owner = "astrojs";
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://headshed.dev',
   integrations: [tailwind()],
   markdown: {
     remarkPlugins: [remarkReadingTime],
