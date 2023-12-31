@@ -27,7 +27,11 @@ const imgPath = `/images/${content.image}`;
           type: "article",
           image:
             "/images/" + content.image,
+          
         },
+        optional: {
+          description: content.description,
+        }
       }}
       twitter={{
         creator: "@ajbcontracts",
