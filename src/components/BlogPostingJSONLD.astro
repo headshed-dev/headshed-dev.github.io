@@ -1,0 +1,30 @@
+---
+const AstroNamespace = Astro as any;
+const props = AstroNamespace.props;
+
+const { title, description, created, updated, keywords } = props;
+const datePublished = new Date(created);
+const isoDatePublished = datePublished.toISOString(); 
+const dateModified = new Date(updated);
+const isoDateModified = dateModified.toISOString();
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "keywords": keywords,
+  "author": {
+    "@type": "Person",
+    "name": "jon brookes",
+    "url": "https://headshed.dev"
+  },
+  /* the schema expects Date or DateTime using ISO 8601 format. For Date that is yyyy-MM-dd */
+  "datePublished": isoDatePublished,
+  /* updated is optional frontmatter, so we conditionally add dateModified if it exists */
+  ...(isoDateModified && { "dateModified": isoDateModified }),
+};
+
+
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

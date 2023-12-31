@@ -2,6 +2,12 @@
 layout: "../../layouts/CustomMarkdown.astro"
 title: "Build a Second Brain"
 image: "robot-head03.webp"
+created: 2023-12-26
+updated: 2023-12-26
+author: "Jon"
+tags: ["second brain", "logseq", "knowledge base", "journal", "notes", "ideas", "thoughts", "tldr"]
+description: "Build a Second Brain"
+keywords: "second brain, logseq, knowledge base, journal, notes, ideas, thoughts, tldr"
 ---
 
 # TLDR

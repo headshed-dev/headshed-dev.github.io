@@ -2,6 +2,12 @@
 layout: "../../layouts/CustomMarkdown.astro"
 title: "Conquer your fear of the command line"
 image: "frightened-robot.webp"
+created: 2023-12-22
+updated: 2023-12-22
+author: "Jon"
+tags: ["command line", "cli", "shell", "bash", "zsh", "powershell", "wsl", "windows", "linux", "mac", "docker", "vscode"]
+description: "Conquer your fear of the command line"
+keywords: "command line, cli, shell, bash, zsh, powershell, wsl, windows, linux, mac, docker, vscode"
 ---
 
 # TLDR

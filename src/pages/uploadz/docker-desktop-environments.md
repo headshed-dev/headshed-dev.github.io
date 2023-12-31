@@ -2,6 +2,12 @@
 layout: "../../layouts/CustomMarkdown.astro"
 title: "Get going with Docker Containers"
 image: "container.webp"
+created: 2023-12-22
+updated: 2023-12-26
+author: "Jon"
+tags: ["docker", "containers"]
+description: "Get going with Docker Containers"
+keywords: "docker, containers"
 ---
 
 # TLDR

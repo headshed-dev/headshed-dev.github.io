@@ -1,6 +1,7 @@
 ---
 import ButtonGroup from "./ButtonGroup.astro";
 import { Image } from "astro:assets";
+import Button from "./Button.astro";
 
 
 
@@ -32,24 +33,22 @@ class="bg-gray-50 dark:bg-gray-900 border border-gray-200 shadow-lg dark:border-
 
 
   <div class="px-8 py-8">
-    {
+    <!-- {
       type && (
         <span class="bg-primary text-white text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-blue-100 mb-2">
           {type}
         </span>
       )
-    }
+    } -->
     <h2 class="text-gray-900 dark:text-white text-3xl font-extrabold mb-2">
       {projectTitle}
     </h2>
     <p class="text-lg font-normal text-gray-700 dark:text-gray-400 mb-4">
       {body}
     </p>
-    <!-- <ButtonGroup text1="More Info" href1={href} text2="Code Repo" href2={repo}  /> -->
-      <button
-        class="justify-center items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white"
-        type="button">Read more &hellip;</button
-      >
+    <div class="flex justify-center mt-10">
+      <Button text="Read more" href={href} />
+      </div>
     </div>
   </a>
 </div>

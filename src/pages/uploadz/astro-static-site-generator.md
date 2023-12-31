@@ -2,6 +2,12 @@
 layout: "../../layouts/CustomMarkdown.astro"
 title: "Astro Static Site Generator"
 image: astro-saucer.webp
+created: 2023-12-23
+updated: 2023-12-26
+author: "Jon"
+tags: ["astro", "static site generator", "ssg", "react", "svelte", "vue", "gatsby", "nextjs", "nuxtjs", "sapper", "sveltekit", "vite", "snowpack", "webpack", "tailwind", "tailwindcss", "tailwindui", "tailblocks", "tailwindcomponents", "tailwindtoolbox", "tailwindtemplates", "tailwindstarterkit", "tailwindadmin"]
+description: "Astro Static Site Generator"
+keywords: "astro, static site generator, ssg, react, svelte, vue, gatsby, nextjs, nuxtjs, sapper, sveltekit, vite, snowpack, webpack, tailwind, tailwindcss, tailwindui, tailblocks, tailwindcomponents, tailwindtoolbox, tailwindtemplates, tailwindstarterkit, tailwindadmin"
 ---
 
 # TL;DR

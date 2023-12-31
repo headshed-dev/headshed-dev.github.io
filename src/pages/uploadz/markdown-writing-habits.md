@@ -2,6 +2,12 @@
 layout: "../../layouts/CustomMarkdown.astro"
 title: "Get writing with Markdown"
 image: "keyboard01.jpeg"
+created: 2023-12-20
+updated: 2023-12-22
+author: "Jon"
+tags: ["markdown", "writing", "journal", "notes", "blog"]
+description: "Get writing with Markdown"
+keywords: "markdown, writing, journal, notes, blog"
 ---
 
 # TLDR

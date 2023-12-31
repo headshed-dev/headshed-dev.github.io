@@ -2,6 +2,12 @@
 layout: "../../layouts/CustomMarkdown.astro"
 title: "python virtual environments"
 image: python03.webp
+created: 2023-12-19
+updated: 2023-12-26
+author: "Jon"
+tags: ["python", "virtualenv", "venv", "docker", "vscode"]
+description: "python virtual environments"
+keywords: "python, virtualenv, venv, docker, vscode"
 ---
 
 # TL;DR
