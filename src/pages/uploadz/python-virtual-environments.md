@@ -12,25 +12,41 @@ keywords: "python, virtualenv, venv, docker, vscode"
 
 # TL;DR
 
-typically on Linux, you can create a virtual environment with:
+typically on Linux, you can create a virtual environment with as little as:
+
+```bash
+python  -m venv venv
+```
+
+but you may need to use `python3` depending on your system and perhaps to specify a path to pythyon with
 
 ```bash
 python3 -m venv venv --python=/path/to/python3
 ```
 
-and activate it with:
+then activate the environment with:
 
 ```bash
 source venv/bin/activate
 ```
 
-on other system you may need to install `virtualenv` first:
+on some system you may need to install `virtualenv` first:
 
 ```bash
 pip install virtualenv
 ```
 
-you may need to use `python` instead of `python3` depending on your system.
+changes you make in your environment with `pip install [insert pip module here]` may be stored for future use with 
+
+```bash
+pip freeze > requirements.txt
+```
+
+and re-applied with 
+
+```bash
+pip install -r requirements.txt
+```
 
 # Why Python ?
 
