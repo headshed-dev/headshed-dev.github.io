@@ -173,7 +173,7 @@ So long as you commit any code you write back to the Git repo, you can pick up w
 
 Conda is a package manager that is used to install and manage packages for python and other languages. It is often used in data science and machine learning projects and is another, popularly used method to manage python environments.
 
-I place this after the docker method, as running both venv and conda in the same environment can cause issues and managing the both on a single system, typically a laptop, can lead to issues that are not worth ranging with in my opinion. At this time, I am using docker containers with VSCode and in the virtual environment approach, as I can use venv or conda in separate containers if I need to. Its up to you to decide what works best for you but would still recommend the docker approach as it will give more consistent and reproducible environments for development and more specifically, deployment. 
+I place this after the docker method, as running both venv and conda in the same environment can cause issues and managing the both on a single system, typically a laptop, can lead to issues that are not worth wrangling with in my opinion. At this time, I am using docker containers with VSCode and in the virtual environment approach, as I can use venv or conda in separate containers if I need to. Its up to you to decide what works best for you but would still recommend the docker approach as it will give more consistent and reproducible environments for development and more specifically, deployment. 
 
 ## Getting started with Conda
 
