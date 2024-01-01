@@ -3,7 +3,7 @@ layout: "../../layouts/CustomMarkdown.astro"
 title: "python virtual environments"
 image: python03.webp
 created: 2023-12-19
-updated: 2023-12-26
+updated: 2023-01-01
 author: "Jon"
 tags: ["python", "devops"]
 description: "Python virtual environments isolate projects, letting you use different Python versions and packages without conflicts"
@@ -12,13 +12,14 @@ keywords: "python, virtualenv, venv, docker, vscode"
 
 # TL;DR
 
-typically on Linux, you can create a virtual environment with as little as:
+Typically within Linux, you can create a virtual environment with as little as:
 
 ```bash
 python  -m venv venv
 ```
 
-but you may need to use `python3` depending on your system and perhaps to specify a path to pythyon with
+But you may need to use `python3`, depending on your system, and perhaps to specify a path to Python with:
+
 
 ```bash
 python3 -m venv venv --python=/path/to/python3
@@ -54,15 +55,15 @@ As a part of our ventures into second brain techniques and technologies, our cur
 
 Whilst Python is a programming language that is used in many different fields such as web development, data science, machine learning, and many others, primarily, to use LLMs (Large Language Models) such as GPT-3, you typically need to use Python or be at least familiar with it. This is because many of the APIs that are used to interact with these models are written in Python and the greater community of developers that are working on these models are often using Python.
 
-# What is a virtual environment?
+# What is a Python virtual environment?
 
 Python virtual environments isolate projects, letting you use different Python versions and packages without conflicts.
 
-# Why use a virtual environment?
+# Why use a Python virtual environment?
 
 You may want to use a virtual environment if you are working on multiple python projects that require different versions of python or different versions of python packages.
 
-Another more precient need in my view is to maintain a clean build environment for any given project. In order to do so, it is often a chosen pattern to isolate each project in such a way as to be easy to reproduce elesewher be it for other developers or for deployment to production.
+Another more prescient need in my view is to maintain a clean build environment for any given project. In order to do so, it is often a chosen pattern to isolate each project in such a way as to be easy to reproduce elesewher be it for other developers or for deployment to production.
 
 One, very common way to do this for python is to use `virtualenv` or `venv` which is a built in module in python.
 
@@ -114,7 +115,7 @@ source venv/bin/activate
 
 This is a common pattern for moving around python projects and is often used in production environments as well.
 
-# Another way
+# Another way, using Docker
 
 There are several other ways in which we can control python environments but more generally, any environment can be controlled with Docker. Docker is a containerization technology that allows us to create a container that has all the dependencies we need for a project and then run that container on any system that has Docker installed.
 
@@ -122,7 +123,7 @@ When used in conjuction with VSCode and the Remote Containers extension, we can 
 
 Prerequisites are to have Docker installed and the Remote Containers extension installed in VSCode. This may pose a challenge more than the virtual environment approach but it is a very powerful way to manage environments and is becoming more popular. 
 
-# Getting started with VSCode and Docker
+## Getting started with VSCode and Docker
 
 For a new project, create a named repo in github, choose a .gitignore and license so as to initialise the repo.
 
@@ -167,4 +168,72 @@ basically we have a comprehensive virtual environment that we can use locally an
 
 So long as you commit any code you write back to the Git repo, you can pick up where you left off using the same environment or one that is created by checking out this repository and choosing to `Clone Repository in Container Volume` using the same VSCode extension.
 
+
+# Another way, using Conda
+
+Conda is a package manager that is used to install and manage packages for python and other languages. It is often used in data science and machine learning projects and is another, popularly used method to manage python environments.
+
+I place this after the docker method, as running both venv and conda in the same environment can cause issues and managing the both on a single system, typically a laptop, can lead to issues that are not worth ranging with in my opinion. At this time, I am using docker containers with VSCode and in the virtual environment approach, as I can use venv or conda in separate containers if I need to. Its up to you to decide what works best for you but would still recommend the docker approach as it will give more consistent and reproducible environments for development and more specifically, deployment. 
+
+## Getting started with Conda
+
+Conda can be installed with 'miniconda', where the following is taken direct from their [installation instructions](https://docs.conda.io/projects/miniconda/en/latest/) :
+
+```bash
+mkdir -p ~/miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+```
+
+this downloads what looks like a shell script, which you can take a look at if you prefer to see what it does before running it, but it is essenntially a script with a binary embeedded.
+
+```bash
+ ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+ rm -rf ~/miniconda3/miniconda.sh
+```
+and the above now runs the downloaded script / exectuble then clears out the downloaded file.
+
+```bash
+ ~/miniconda3/bin/conda init
+```
+to initialise the shell environment.
+
+```bash
+~/miniconda3/bin/conda init bash
+source ~/.bashrc    
+```
+now to use conda to create and activate a virtual environment, we can run:
+
+```bash
+conda create -n newenv python=3.11
+conda activate newenv
+```
+python packages are subsequently installed with:
+
+```bash
+conda install numpy # for example
+```
+A reason for using conda may be that you need to install a package or module that is just not working in the pip / venv approach. This is not uncommon and is a reason why conda is popular in data science and machine learning projects.
+
+As with with the venv approach, you can save away the packages you have installed, you can use:
+
+```bash
+conda env export > environment.yml
+```
+
+and re-apply them with:
+
+```bash
+conda env create -f environment.yml
+```
+
+Deactivating the environment and according to [docs.conda.io](https://docs.conda.io/projects/conda/en/4.6.1/user-guide/tasks/manage-environments.html#deactivating-an-environment) is done with:
+
+```bash
+source deactivate
+```
+which removes the path name of your current environment from your system command.
+
+# Conclusion
+
+Whichever method you choose to virtualise Python environmetns, it is important to be able to reproduce your environment for your project. This is important for development and for deployment. There is currently no 'one size fits all' solution and having an awareness of more than one approach to virtualising Python environments will be necessary when working on different projects and for different clients.
 
