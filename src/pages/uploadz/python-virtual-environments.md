@@ -4,7 +4,7 @@ title: "python virtual environments"
 image: python03.webp
 created: 2023-12-19
 updated: 2023-01-01
-author: "Jon"
+author: "Jon Brookes"
 tags: ["python", "devops"]
 description: "Python virtual environments isolate projects, letting you use different Python versions and packages without conflicts"
 keywords: "python, virtualenv, venv, docker, vscode"
