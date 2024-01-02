@@ -4,7 +4,7 @@ title: "Conquer your fear of the command line"
 image: "frightened-robot.webp"
 created: 2023-12-22
 updated: 2023-12-22
-author: "Jon"
+author: "Jon Brookes"
 tags: ["cli", "bash"]
 description: "The once-ubiquitous command prompt faded from the forefront of personal computing, leaving many technology workers working to regain direct access to its power"
 keywords: "command line, cli, shell, bash, zsh, powershell, wsl, windows, linux, mac, docker, vscode"

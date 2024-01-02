@@ -4,7 +4,7 @@ title: "Build a Second Brain"
 image: "robot-head03.webp"
 created: 2023-12-26
 updated: 2023-12-26
-author: "Jon"
+author: "Jon Brookes"
 tags: ["second-brain", "logseq"]
 description: "logseq is a local-first, non-linear, outliner notebook for organizing and sharing your personal knowledge base and an excellent way to build a second brain"
 keywords: "second brain, logseq, knowledge base, journal, notes, ideas, thoughts, tldr"

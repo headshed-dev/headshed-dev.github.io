@@ -4,7 +4,7 @@ title: "Get writing with Markdown"
 image: "keyboard01.jpeg"
 created: 2023-12-20
 updated: 2023-12-22
-author: "Jon"
+author: "Jon Brookes"
 tags: ["markdown", "writing"]
 description: "Markdown is a simple markup language that allows you to write plain text that can be converted to HTML. It's a great way to write notes, journals, and posts."
 keywords: "markdown, writing, journal, notes, blog"

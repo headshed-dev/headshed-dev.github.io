@@ -4,7 +4,7 @@ title: "Get going with Docker Containers"
 image: "container.webp"
 created: 2023-12-22
 updated: 2023-12-26
-author: "Jon"
+author: "Jon Brookes"
 tags: ["docker", "containers"]
 description: "install a containerised application in which we may store information, notes, knowledge base, etc. but this will be for our own, private and local use "
 keywords: "docker, containers"
