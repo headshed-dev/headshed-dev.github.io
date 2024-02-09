@@ -12,7 +12,7 @@ keywords: "astro, static site generator, ssg, react, svelte, vue, gatsby, nextjs
 
 # TL;DR
 
-with node.js installed, you can get started with Astro as simply as :
+Having `node.js` installed, you can get started with Astro as simply as :
 
 ```bash
 npm create astro@latest
