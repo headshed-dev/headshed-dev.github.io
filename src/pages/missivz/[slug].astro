@@ -2,8 +2,11 @@
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import HeaderSmall from "../../components/HeaderSmall.astro";
+import { formatDate } from '../../utills/tools';
+
+
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("blog");
+  const blogEntries = await getCollection("missivz");
   return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
@@ -12,25 +15,13 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-// const { Body } = await entry.body;
-
-const formatDate = (dateString: string) => {
-  const date = new Date(dateString);
-  const year = date.getFullYear();
-  const month = ("0" + (date.getMonth() + 1)).slice(-2); // Months are 0-indexed in JavaScript
-  const day = ("0" + date.getDate()).slice(-2);
-  return `${year}-${month}-${day}`;
-}
-
-
-console.log(entry);
 
 ---
 
 <Layout title="{entry.data.title}">
   <div class="text-center">
     <HeaderSmall title={entry.data.title} subtitle={entry.data.author} />
-    <p>{formatDate(entry.data.publishedDate.toString())}</p>
+    <p class="text-gray-700 dark:text-gray-400">{formatDate(entry.data.publishedDate.toString())}</p>
   </div>
 
   <div

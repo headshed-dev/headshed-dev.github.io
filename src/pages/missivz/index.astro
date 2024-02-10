@@ -3,10 +3,11 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import HeaderSmall from "../../components/HeaderSmall.astro";
 import { Image } from "astro:assets";
+import { formatDate } from '../../utills/tools';
 
 import robotImg from "../../images/missive.jpeg";
 
-const blogPosts = await getCollection("blog");
+const blogPosts = await getCollection("missivz");
 ---
 
 <Layout title="Missivz">
@@ -14,26 +15,23 @@ const blogPosts = await getCollection("blog");
 		<HeaderSmall title="Missivz" subtitle="thoughts in time" />
 	</div>
 	<Image
-	width="300"
-	height="300"
-	class="rounded mx-auto mt-6"
-	src={robotImg}
-	alt="wee happy robot waving"
-  />
+		width="400"
+		height="400"
+		class="rounded mx-auto mt-6"
+		src={robotImg}
+		alt="wee happy robot waving"
+	/>
 	<div class="mt-8 mb-10">
 		{
 			blogPosts.map((post) => (
-					<a href={`/blog/${post.slug}`}>
-						
+				<a href={`/missivz/${post.slug}`}>
+					<HeaderSmall
+						title={post.data.title}
+						subtitle={post.data.author}
+					/>
+					<p class="text-center text-gray-700 dark:text-gray-400">{formatDate(post.data.publishedDate.toString())}</p>
 
-						<HeaderSmall title={post.data.title} subtitle={post.data.author} />
-
-
-						
-						
-						
-						</a>
-				</p>
+				</a>
 			))
 		}
 	</div>
