@@ -12,7 +12,7 @@ keywords: "python, virtualenv, venv, docker, vscode"
 
 # TL;DR
 
-Typically within Linux, you can create a virtual environment with as little as:
+Within Linux, you can create a virtual environment with as little as:
 
 ```bash
 python  -m venv venv
