@@ -12,7 +12,7 @@ keywords: "command line, cli, shell, bash, zsh, powershell, wsl, windows, linux,
 
 # TL;DR
 
-if your on windows :
+On windows :
 
 [Installing WSL](https://learn.microsoft.com/en-us/windows/wsl/install) is relatively easy with a few clicks to make sure prequisite modules are in place with
 
