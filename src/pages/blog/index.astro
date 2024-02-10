@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import HeaderSmall from "../../components/HeaderSmall.astro";
+import { Image } from "astro:assets";
+
+import robotImg from "../../images/missive.jpeg";
+
+const blogPosts = await getCollection("blog");
+---
+
+<Layout title="Missivz">
+	<div class="text-center">
+		<HeaderSmall title="Missivz" subtitle="thoughts in time" />
+	</div>
+	<Image
+	width="300"
+	height="300"
+	class="rounded mx-auto mt-6"
+	src={robotImg}
+	alt="wee happy robot waving"
+  />
+	<div class="mt-8 mb-10">
+		{
+			blogPosts.map((post) => (
+					<a href={`/blog/${post.slug}`}>
+						
+
+						<HeaderSmall title={post.data.title} subtitle={post.data.author} />
+
+
+						
+						
+						
+						</a>
+				</p>
+			))
+		}
+	</div>
+</Layout>

@@ -1,0 +1,47 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import HeaderSmall from "../../components/HeaderSmall.astro";
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("blog");
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+// const { Body } = await entry.body;
+
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  const year = date.getFullYear();
+  const month = ("0" + (date.getMonth() + 1)).slice(-2); // Months are 0-indexed in JavaScript
+  const day = ("0" + date.getDate()).slice(-2);
+  return `${year}-${month}-${day}`;
+}
+
+
+console.log(entry);
+
+---
+
+<Layout title="{entry.data.title}">
+  <div class="text-center">
+    <HeaderSmall title={entry.data.title} subtitle={entry.data.author} />
+    <p>{formatDate(entry.data.publishedDate.toString())}</p>
+  </div>
+
+  <div
+    class="prose dark:prose-invert
+  prose-h1:font-bold prose-h1:text-xl
+  prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-xl
+  prose-headings:underline mx-auto mt-8 mb-10"
+  >
+    <Content />
+  </div>
+
+
+
+</Layout>
