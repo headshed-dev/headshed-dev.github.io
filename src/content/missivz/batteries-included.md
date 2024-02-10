@@ -1,8 +1,8 @@
 ---
-title: Blog post 2
-author: John Doe
+title: Batteries Included
+author: Jon Brookes
 isDraft: false
-publishedDate: 02-01-2023
+publishedDate: 02-10-2024
 tags:
   - Web Development
   - JavaScript

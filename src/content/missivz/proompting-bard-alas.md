@@ -1,8 +1,8 @@
 ---
-title: Blog post 1
-author: John Doe
+title: Proompting Bard Alas
+author: Jon Brookes
 isDraft: false
-publishedDate: 02-01-2023
+publishedDate: 01-05-2024
 tags:
   - Web Development
   - JavaScript
