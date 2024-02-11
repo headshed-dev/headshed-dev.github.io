@@ -15,7 +15,7 @@ To begin this log of messages over time, as a code wrangler and DevOps person, I
 
 ![busted](/images/broken_navbar_astro.png)
 
-A broken navbar discovered after a hasty upgrade to all @latest". 
+A broken navbar discovered after a hasty upgrade to all @latest. 
 
 The burger should be top right, but it is not and tapping on it flashes up the menu momentarily before disappearing again. A bit more caution could have prevented this before blasting all packages to be @latest.
 
@@ -65,7 +65,7 @@ and here is the command equivalent to the above
 ```
 
 
-To fully restore the working state, I ran npm install and then checked with npm run dev to confirm the navbar was functioning again.
+To fully restore the working state, I ran npm install and then checked with `npm run dev` to confirm the navbar was functioning again.
 
 Success! The navbar is restored, and we're back in business. The gremlins, or perhaps some "skills issues" as the Primeagen might say, are gone. All hail the [Primeagen!](https://www.youtube.com/results?search_query=theprimeagen)
 
