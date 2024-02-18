@@ -2,7 +2,7 @@
 title: Self Host Workflow Runners
 author: Jon Brookes
 isDraft: false
-publishedDate: 03-18-2024
+publishedDate: 02-18-2024
 tags:
   - Web Development
   - JavaScript
@@ -35,7 +35,7 @@ jobs:
     # runs-on: ubuntu-latest
     runs-on: self-hosted
 ```
-In this example, we'll comment out the default runs-on command and change it to self-hosted, indicating that a self-hosted runner should be used. This picks a runner from the organization-level pool, so the agent can run on your own infrastructure (cloud, server, data center, behind a firewall, Raspberry Pi, home server, etc.).
+In this example, I commented out the default runs-on command and change it to self-hosted, indicating that a self-hosted runner should be used. This picks a runner from the organization-level pool, so the agent can run on your own infrastructure (cloud, server, data center, behind a firewall, Raspberry Pi, home server, etc.).
 
 The agent has access to the user account under which it runs, so its access level depends on the operating system hosting it and the placement of this in your infrastructure and networks but we have the flexibility also to host this on bare metal, a virtual intance, a container, whatever takes our fancy.
 
