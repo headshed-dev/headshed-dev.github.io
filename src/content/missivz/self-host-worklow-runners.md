@@ -15,19 +15,19 @@ canonicalURL: https://localhost:3000/blog/blog-post-1
 
 Pipelines are a great way to automate workflows. They can be used to build, test, and deploy code. However, they can incur costs when run on cloud services. In this missive, I look back on how easy it can be to  self-host a Github workflow runners that would normally run in the cloud, consuming paid or free build minutes. It's not just build minutes that can be saved by self hosting a runner. We can extend workflows to reach into our own infrastructure, previously not possible in standard cloud-based CI/CD.
 
-In Github runners can be run at the level of an organisation or account and at the repository level. I recently configred on a project under its 
+GitHub runners can be run at the organization, account, or repository level. I recently configured a runner on a project by following these steps:
 
-```
-settings => Actions => Runners => select 'New Runner'
-```
+1. Go to the project's settings and navigate to Actions > Runners.
+1. Click "New Runner."
+1. Select "New self-hosted runner."
+1. Choose your operating system (macOS, Linux, or Windows). I picked Linux, natually.
+1. Follow the provided installation instructions. Make sure to check the GitHub web console for the latest process.
 
-and picked 'New self-hosted runner' 
+Run the runner using ./run.sh or wrap it in a systemctl service in Linux. Adapt to suit if you chose another OS.
 
-Next, from macOS / Linux / Windows I naturally pick `[Linux]`
+To use this runner in a workflow, simply edit your YAML file like this:
 
-Install instructions are provided by the next step to install the binary, ofcourse go check on the Github web console to get the latest / current process and at that point, you can just run the runner with `.\run.sh` and be done with it or wrap this in a systemctl service.
 
-To use this agent, within a workflow a simple edit something like
 
 ```yaml
 jobs:
@@ -35,12 +35,15 @@ jobs:
     # runs-on: ubuntu-latest
     runs-on: self-hosted
 ```
+In this example, we'll comment out the default runs-on command and change it to self-hosted, indicating that a self-hosted runner should be used. This picks a runner from the organization-level pool, so the agent can run on your own infrastructure (cloud, server, data center, behind a firewall, Raspberry Pi, home server, etc.).
 
-here I commented out the runs on by default and changed it to self-hosted
+The agent has access to the user account under which it runs, so its access level depends on the operating system hosting it and the placement of this in your infrastructure and networks but we have the flexibility also to host this on bare metal, a virtual intance, a container, whatever takes our fancy.
 
-a self hosted running is picked from the pool of runners at the organisation level in this instance and away the agent goes, running on your own infra be it in the cloud, on a server in a data center, behind a firewall in a back office, on a rasberry pi or home server. 
+Some tips for using self-hosted runners:
 
-The agent has access to which ever user you ran it under, so its access is as fine grained as your imagination and the operating system that is hosting it. 
+* Make sure your runner is properly configured and has the necessary permissions to access the resources it needs.
+* Be aware of the security implications of running workflows on your own infrastructure.
+* Consider using a tool like Terraform or Ansible to manage your self-hosted runners.
 
 
 
