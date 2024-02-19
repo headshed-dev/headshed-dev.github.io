@@ -1,5 +1,5 @@
 ---
-title: Code but not as we know it
+title: Low/No Code FlowiseAI
 author: Jon Brookes
 isDraft: false
 publishedDate: 02-19-2024
@@ -13,8 +13,8 @@ canonicalURL: https://localhost:3000/blog/blog-post-1
 
 ![elevator-into-space](/images/elevator01.webp)
 
-In [Flowise](https://flowiseai.com/), applications based on the JavaScript fork of LangChain are modeled in a 'no/low-code' environment. If you are coming from a closed source world, yet trying to implement devops principles this may fill you with fear, dread and uncertainty. Flowise offers the advantage of using plain-text JSON files to represent each workflow. These files are easy to understand, open, and readily backupable, unlike opaque proprietary binary formats
-The data used at runtime and other component prerequisites like credentials are stored in the Flowise data volume, which looks like this
+In [FlowiseAI](https://flowiseai.com/), applications based on the JavaScript fork of LangChain are modeled in a 'no/low-code' environment. If you are coming from a closed source world, yet trying to implement devops principles this may fill you with fear, dread and uncertainty. FlowiseAI offers the advantage of using plain-text JSON files to represent each workflow. These files are easy to understand, open, and readily backupable, unlike opaque proprietary binary formats
+The data used at runtime and other component prerequisites like credentials are stored in the FlowiseAI data volume, which looks like this
 
 ```bash
 Mode                 LastWriteTime         Length Name
@@ -34,7 +34,7 @@ What is more, the gui that we use in flowise is pleasant to the eye and clearly 
 
 My preference I must say will always be code over graphical user interface but in the case of flowise I see the benefit of having a visual and easy to see 'langchain' or chain of language models and supportive roles that will, beyond a level of complexity, become too large to hold in the front space of your noggin brain bonce at first glance. Similar is seen in some state mangement frameworks and I like what is going on here.
 
-The Flowise team is considering adding the ability to generate code from each flow, which would be a fantastic addition and make the platform even more appealing. However, even without that feature, Flowise offers a shortcut to implementing solutions users can interact with, allowing developers to focus on problem-solving rather than low-level implementation details.
+The FlowiseAI team is considering adding the ability to generate code from each flow, which would be a fantastic addition and make the platform even more appealing. However, even without that feature, FlowiseAI offers a shortcut to implementing solutions users can interact with, allowing developers to focus on problem-solving rather than low-level implementation details.
 
 That aside, just learning and getting your head around langchain can be time consuming and this is a short cut to implementing something that your users can get their hands on and you can focus on problem solving rather than fine grained implementation steps.
 
