@@ -8,6 +8,20 @@ import { formatDate } from '../../utills/tools';
 import robotImg from "../../images/missive.jpeg";
 
 const blogPosts = await getCollection("missivz");
+
+// Sort blogPosts by date
+blogPosts.sort((a, b) => {
+  const dateA = new Date(a.data.publishedDate);
+  const dateB = new Date(b.data.publishedDate);
+
+  if (!isNaN(dateA.getTime()) && !isNaN(dateB.getTime())) {
+    return dateB.getTime() - dateA.getTime();
+  } else {
+    return 0;
+  }
+});
+
+// console.log(blogPosts);
 ---
 
 <Layout title="Missivz">
@@ -24,6 +38,7 @@ const blogPosts = await getCollection("missivz");
 	<div class="mt-8 mb-10">
 		{
 			blogPosts.map((post) => (
+				
 				<a href={`/missivz/${post.slug}`}>
 					<HeaderSmall
 						title={post.data.title}

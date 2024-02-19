@@ -18,7 +18,7 @@ const { Content } = await entry.render();
 
 ---
 
-<Layout title="{entry.data.title}">
+<Layout title={entry.data.title}>
   <div class="text-center">
     <HeaderSmall title={entry.data.title} subtitle={entry.data.author} />
     <p class="text-gray-700 dark:text-gray-400">{formatDate(entry.data.publishedDate.toString())}</p>
