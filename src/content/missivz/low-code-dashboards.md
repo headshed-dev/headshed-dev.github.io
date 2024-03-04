@@ -57,8 +57,8 @@ To create an empty page not associated with a resource perse in filament :
 
 ```bash
 sail artisan make:filament-page CounterPage
-...
-   INFO  Filament page [app/Filament/Pages/CounterPage.php] created successfully.  
+
+INFO  Filament page [app/Filament/Pages/CounterPage.php] created successfully.  
 ```
 (pressing return to not enter any resource) and which will subsequently create
 ```
@@ -93,7 +93,7 @@ edit `counter.blade.php` to contain similar to
 </div>
 ```
 counter-php to have something like
-```php
+```
 <?php
 
 namespace App\Livewire;
