@@ -5,24 +5,17 @@ import DarkModeToggle from "./DarkModeToggle.astro";
 
 <nav
   transition:persist
-
-
-  class="fixed top-0 w-full z-50 bg-stone-100 border-gray-200 dark:bg-slate-800"
+  class="bg-stone-100 border-gray-200 dark:bg-slate-800"
 >
   <div
     class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
   >
     <a href="/">
       <span
-        class="self-center text-xl  whitespace-nowrap dark:text-white"
-        >
-        <div class="flex items-center">
-          <img class="h-5 w-5 mr-2 dark:hidden" src="/images/headshed-dev-plain-light.svg" alt="dashboard image">
-          <img class="h-5 w-5 mr-2 hidden dark:block" src="/images/headshed-dev-plain-dark.svg" alt="dashboard image">
-         {data.siteName}</span
+        class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+        >{data.siteName}</span
       >
     </a>
-    </div>
    
     <button
       data-collapse-toggle="navbar-default"
