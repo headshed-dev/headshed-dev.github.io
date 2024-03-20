@@ -131,8 +131,10 @@ And following the many how-tos and content out there on Filament we can add CRUD
 
 ### References
 
+```
  * [https://github.com/tuto1902](https://github.com/tuto1902)
  * [https://github.com/tuto1902/laravel-lms/](https://github.com/tuto1902/laravel-lms/)
  * [https://www.youtube.com/@Tuto1902](https://www.youtube.com/@Tuto1902)
  * [https://jorgearturorojas.gumroad.com/l/filament-bootcamp](https://jorgearturorojas.gumroad.com/l/filament-bootcamp)
  * [https://gumroad.com/](https://gumroad.com/)
+```
