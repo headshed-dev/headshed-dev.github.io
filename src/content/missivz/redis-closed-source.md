@@ -40,4 +40,10 @@ the latter of which whilst it ( currently ) uses beanstalkd it is written in a w
 
 https://github.com/TutorialEdge/go-rest-api-course/tree/version-2
 
-This 
+This provides an api that abstracts queue based communictions between instances of a cms using 
+
+https://github.com/headshed-dev/cms-lite
+
+which I am developing for a client and for open source, self hosted or SaaS of static sites, such as Astro, Gatsby, Hugo etc. 
+
+This was born out of frustraion looking for a genuine 'free teir' for CMS SaaS for non-profits and a realistic low cost for non enterprise customers that make less than 10 edits a day and typically have a hanful of staff submitting content. 
