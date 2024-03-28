@@ -2,7 +2,7 @@
 title: Redis now closed source 😭
 author: Jon Brookes
 isDraft: false
-publishedDate: 03-20-2024
+publishedDate: 03-28-2024
 tags:
   - laravel 
   - livewire 
