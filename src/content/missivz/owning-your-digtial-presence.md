@@ -16,11 +16,7 @@ canonicalURL: https://localhost:3000/blog/blog-post-1
 
 ![grassy-knoll01](/images/grassy-knoll01.webp)
 
-It wasn't long ago that I lost Facebook monetization on my personal account.  Here's the story: I changed my name on Facebook, then changed it back.  Why?  Because I was working with a non-profit organization, and I needed to explain to their users something important.  They needed to use their own, proper user accounts to access their organization's business pages.  If they didn't, they could fall into a gray area of Facebook's policies against "fake accounts."  This could have led to their Facebook pages being shut down, which would have been devastating for the non-profit. It could have caused reputational damage beyond their ability to recover.  So, I needed to find out the consequences of changing a user's account details.  The only ethical and practical way to do this was on my own account.  Two weeks after demonstrating this process, Facebook banned me from monetizing my account due to "suspicious activity."
-
-Many people we encounter don't realize this risk factor. They see no reason why they shouldn't run their businesses, or even their personal lives, on social media platforms that are, after all, "free to use."
-
-
+Many people see no reason why they shouldn't run their businesses, or even their personal lives, on social media platforms that are, after all, "free to use."
 
 This may be true.  If you don't mind losing monetization or even getting banned, then social media might still work for you.  However, if your business relies heavily on a social media platform for marketing and sales, losing your account could be very damaging.
 
