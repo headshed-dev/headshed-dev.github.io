@@ -22,7 +22,6 @@
       "title": "Missivz",
       "href": "/missivz"
     }
-
   ],
   "social": [
     {
@@ -39,7 +38,6 @@
     }
   ],
   "articles": [
-
     {
       "projectTitle": "Get writing with Markdown",
       "href": "/uploadz/markdown-writing-habits",
@@ -99,7 +97,16 @@
       "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg",
       "featuredImage": "python03.webp",
       "featured": true
+    },
+    {
+      "projectTitle": "Fabric",
+      "href": "/uploadz/fabric",
+      "about": "fabric.",
+      "type": "Python, AI, LLM",
+      "repo": "https://github.com",
+      "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg",
+      "featuredImage": "shiny04.jpg",
+      "featured": true
     }
-      
   ]
 }
