@@ -39,13 +39,13 @@
   ],
   "articles": [
     {
-      "projectTitle": "Get writing with Markdown",
-      "href": "/uploadz/markdown-writing-habits",
-      "about": "Establish a regular pattern of journalling, drafts and rewrites.",
-      "type": "markdown, routines, habits",
+      "projectTitle": "The Rise of Prompt Engineering",
+      "href": "/uploadz/fabric",
+      "about": "and how Fabric Makes it Easy.",
+      "type": "Python, AI, LLM",
       "repo": "https://github.com",
       "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg",
-      "featuredImage": "keyboard01.webp",
+      "featuredImage": "shiny04.jpg",
       "featured": true
     },
     {
@@ -56,6 +56,26 @@
       "repo": "https://github.com",
       "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg",
       "featuredImage": "frightened-robot.webp",
+      "featured": true
+    },
+    {
+      "projectTitle": "Python Virtual Environments",
+      "href": "/uploadz/python-virtual-environments",
+      "about": "Different ways to create and manage Python virtual environments.",
+      "type": "Python, Shell",
+      "repo": "https://github.com",
+      "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg",
+      "featuredImage": "python03.webp",
+      "featured": true
+    },
+    {
+      "projectTitle": "Get writing with Markdown",
+      "href": "/uploadz/markdown-writing-habits",
+      "about": "Establish a regular pattern of journalling, drafts and rewrites.",
+      "type": "markdown, routines, habits",
+      "repo": "https://github.com",
+      "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg",
+      "featuredImage": "keyboard01.webp",
       "featured": true
     },
     {
@@ -86,26 +106,6 @@
       "repo": "https://github.com",
       "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg",
       "featuredImage": "container.webp",
-      "featured": true
-    },
-    {
-      "projectTitle": "Python Virtual Environments",
-      "href": "/uploadz/python-virtual-environments",
-      "about": "Different ways to create and manage Python virtual environments.",
-      "type": "Python, Shell",
-      "repo": "https://github.com",
-      "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg",
-      "featuredImage": "python03.webp",
-      "featured": true
-    },
-    {
-      "projectTitle": "Fabric",
-      "href": "/uploadz/fabric",
-      "about": "fabric.",
-      "type": "Python, AI, LLM",
-      "repo": "https://github.com",
-      "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg",
-      "featuredImage": "shiny04.jpg",
       "featured": true
     }
   ]
