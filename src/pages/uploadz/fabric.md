@@ -3,14 +3,14 @@ layout: "../../layouts/CustomMarkdown.astro"
 title: "The Rise of Prompt Engineering and how Fabric Makes it Easy"
 image: shiny04.jpg
 created: 2024-06-07
-updated: 2024-06-07
+updated: 2024-06-08
 author: "Jon Brookes"
 tags: ["python", "LLms"]
 description: "The Rise of Prompt Engineering and how Fabric Makes it Easy"
 keywords: "python, LLM, pipx, AI"
 ---
 
-# TLDR
+# TL;DR
 
 The world of AI is full of tools and libraries, but Fabric stands out for its focus on prompt engineering. Prompt engineering involves crafting clever questions for large language models (LLMs) to improve the quality and accuracy of their responses. Fabric simplifies prompt creation and management, making it easy to use prompts for various tasks, including content creation and document analysis.
 
@@ -46,9 +46,9 @@ While vector database integration with Fabric is not something I have found yet,
 
 # Getting Started with Fabric
 
-This section will detail the steps I took to set up and run Fabric, including checking for the pipx installation using the which pipx command... (text continues)
+I'm using Linux, Ubuntu 22.04 running in WSL which will work similarly on other Linux distributions but you would need to modify package installations to suit for your package manager of choice. [Instructions](https://github.com/danielmiessler/fabric?tab=readme-ov-file#setting-up-the-fabric-commands) for Mac use `brew`.
 
-first, I ran `which pipx` to see if I had it installed on my system
+I ran `which pipx` to see if I had it installed on my system
 
 ```bash
 fabric on  main is 📦 v1.2.0 via 🐍 v3.10.12
@@ -327,3 +327,19 @@ and here follows the markdown that this outputs to standard out :
 > Study successful PWA case studies like Twitter and Hulu for inspiration.
 >
 > Prioritize security, especially when implementing passwordless authentication in your PWA
+
+# Writing your own prompts
+
+Creating your own [custom patters](https://github.com/danielmiessler/fabric?tab=readme-ov-file#custom-patterns) is straightforward. The patterns that come with `fabric` are installed locally to `~/.config/fabric/patterns` so you can add your own here, each of which are held in their own directory and called at the command line by the folder name.
+
+Reading through the patterns, or prompts that come with `fabric` shows how existing prompts are used to create essays, write newsletters, generate tweets and more. As prompts are written in markdown they are easy to read for us as humans and work for AIs such as OpenAI. 
+
+For example, copying the `extract_wisdom` directory to your own say `my_extract_wisdom` and then editing `system.md` in your new folder to suit your use case is used as above with 
+
+```bash
+yt --transcript https://www.youtube.com/watch?v=3ODP6tTpjqA | fabric --stream --pattern my_extract_wisdom
+```
+
+# Conclusion
+
+Fabric offers a compelling solution for those seeking to leverage the power of prompt engineering. Its user-friendly interface and pre-built prompts make it accessible for anyone, while its command-line structure caters specifically to developers. By simplifying prompt creation and management, Fabric empowers users to unlock the potential of large language models for various tasks, including content creation, document analysis, and information extraction from multimedia sources like YouTube videos. As the field of AI continues to evolve, Fabric positions itself as a valuable tool for maximizing the effectiveness of large language models and their interactions with human users.
