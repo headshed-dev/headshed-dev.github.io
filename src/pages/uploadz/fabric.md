@@ -46,7 +46,7 @@ While vector database integration with Fabric is not something I have found yet,
 
 # Getting Started with Fabric
 
-I'm using Linux, Ubuntu 22.04 running in WSL which will work similarly on other Linux distributions but you would need to modify package installations to suit for your package manager of choice. [Instructions](https://github.com/danielmiessler/fabric?tab=readme-ov-file#setting-up-the-fabric-commands) for Mac use `brew`.
+I'm using Linux, Ubuntu 22.04 running in WSL which will work similarly on other Linux distributions but you would need to modify syntax to suit for your package manager of choice. [Instructions](https://github.com/danielmiessler/fabric?tab=readme-ov-file#setting-up-the-fabric-commands) for Mac use `brew`.
 
 I ran `which pipx` to see if I had it installed on my system
 
@@ -126,7 +126,7 @@ fabric on  main is 📦 v1.2.0 via 🐍 v3.10.12 took 47s
 
 and get literally nothing back, no errors, nada as is common with something command line that is awaiting piped input.
 
-The main thing is that there are no errors so I am a happy campern. Now, I'd like to take it for a run with a youtube video
+The main thing is that there are no errors so I am a happy camper. Now, I'd like to take it for a run with a youtube video
 
 <iframe src="https://www.youtube.com/embed/3ODP6tTpjqA" title="Progressive Web Apps in 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -138,7 +138,7 @@ this is how `yt` a part of `fabric` can be used in a command line pipe to get a 
 yt --transcript https://www.youtube.com/watch?v=3ODP6tTpjqA | fabric --stream --pattern extract_wisdom
 ```
 
-and here follows the markdown that this outputs to standard out :
+and here follows the formatted markdown that this outputs to standard out :
 
 > ## SUMMARY
 >		  
