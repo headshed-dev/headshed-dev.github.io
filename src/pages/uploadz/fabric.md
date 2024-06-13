@@ -330,7 +330,7 @@ and here follows the formatted markdown that this outputs to standard out :
 
 # Writing your own prompts
 
-Creating your own [custom patters](https://github.com/danielmiessler/fabric?tab=readme-ov-file#custom-patterns) is straightforward. The patterns that come with `fabric` are installed locally to `~/.config/fabric/patterns` so you can add your own here, each of which are held in their own directory and called at the command line by the folder name.
+Creating your own [custom patterns](https://github.com/danielmiessler/fabric?tab=readme-ov-file#custom-patterns) is straightforward. The patterns that come with `fabric` are installed locally to `~/.config/fabric/patterns` so you can add your own here, each of which are held in their own directory and called at the command line by the folder name.
 
 Reading through the patterns, or prompts that come with `fabric` shows how existing prompts are used to create essays, write newsletters, generate tweets and more. As prompts are written in markdown they are easy to read for us as humans and work for AIs such as OpenAI. 
 
