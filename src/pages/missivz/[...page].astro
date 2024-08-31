@@ -6,22 +6,37 @@ import { Image } from "astro:assets";
 import { formatDate } from '../../utills/tools';
 
 import robotImg from "../../images/missive.jpeg";
+import Pagination from "../../components/Pagination.astro";
 
-const blogPosts = await getCollection("missivz");
+export async function getStaticPaths({ paginate }: { paginate: any }) {
+	const blogPosts = await getCollection("missivz");
+	
+	// Sort blogPosts by date
+	blogPosts.sort((a, b) => {
+	  const dateA = new Date(a.data.publishedDate);
+	  const dateB = new Date(b.data.publishedDate);
+	
+	  if (!isNaN(dateA.getTime()) && !isNaN(dateB.getTime())) {
+		return dateB.getTime() - dateA.getTime();
+	  } else {
+		return 0;
+	  }
+	});
 
-// Sort blogPosts by date
-blogPosts.sort((a, b) => {
-  const dateA = new Date(a.data.publishedDate);
-  const dateB = new Date(b.data.publishedDate);
+	return paginate(
+		blogPosts, {
+			pageSize: 3,
+	});
 
-  if (!isNaN(dateA.getTime()) && !isNaN(dateB.getTime())) {
-    return dateB.getTime() - dateA.getTime();
-  } else {
-    return 0;
-  }
-});
+}
 
-// console.log(blogPosts);
+
+const props = Astro.props as any;
+const page = props.page;
+
+
+
+
 ---
 
 <Layout title="Missivz">
@@ -37,7 +52,7 @@ blogPosts.sort((a, b) => {
 	/>
 	<div class="mt-8 mb-10">
 		{
-			blogPosts.map((post) => (
+			page.data.map((post: any) => (
 				
 				<a href={`/missivz/${post.slug}`}>
 					<HeaderSmall
@@ -49,5 +64,9 @@ blogPosts.sort((a, b) => {
 				</a>
 			))
 		}
-	</div>
+	</div>   
+
+
+
+	<Pagination prevURL={page.url.prev} nextURL={page.url.next} />
 </Layout>
