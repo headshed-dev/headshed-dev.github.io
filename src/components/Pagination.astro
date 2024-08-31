@@ -1,0 +1,31 @@
+---
+import Button from "./Button.astro";
+
+
+const { prevURL, nextURL } = Astro.props;
+
+---
+
+    <nav aria-label="missive pages" class="flex items-center justify-center mb-10 space-x-4">
+
+        {
+            nextURL && (
+    
+    
+    
+                <a href={nextURL} class="text-blue-500 hover:underline">
+                    <Button text="← " href={nextURL} />
+                </a>
+            )
+    
+        }
+    {
+        prevURL && (
+            <a href={prevURL} class="text-blue-500 hover:underline">
+                <Button text=" →" href={prevURL} />
+            </a>
+        )
+    }
+
+
+</nav>
