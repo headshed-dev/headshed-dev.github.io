@@ -23,3 +23,9 @@ pnpm-debug.log*
 # markdown files ending copy.md
 *copy.md
 .firebase/hosting.ZGlzdA.cache
+
+# shell scripts in project root
+/*.sh
+
+# firebase settings
+firebase/*

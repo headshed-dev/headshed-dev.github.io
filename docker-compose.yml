@@ -1,0 +1,11 @@
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./dist:/usr/share/nginx/html
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+
+
+# docker run -p8080:8080 -v $(pwd)/dist:/usr/share/nginx/html -v $(pwd)/nginx/nginx.conf:/etc/nginx/nginx.conf nginx:alpine
