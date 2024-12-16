@@ -7,16 +7,19 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "import-laravel-images": "dotenv -e .env -- sh -c 'echo IMAGES : $LARAVEL_IMAGES'",
+    "import-laravel-data": "dotenv -e .env -- sh -c 'echo DATA : $LARAVEL_EXPORTED_DATA'"
   },
   "dependencies": {
-    "flowbite": "^2.2.1",
-    "tailwindcss": "^3.4.1",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.3.1",
     "astro-seo": "^0.8.3",
+    "dotenv-cli": "^7.4.4",
+    "flowbite": "^2.2.1",
     "mdast-util-to-string": "^4.0.0",
-    "reading-time": "^1.5.0"
+    "reading-time": "^1.5.0",
+    "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
