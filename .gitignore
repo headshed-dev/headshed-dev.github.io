@@ -30,3 +30,4 @@ pnpm-debug.log*
 # firebase settings
 firebase/*
 public/assets/images
+src/content/missivz/redis-now-closed-source.md src/content/missivz/yet-another-test.md

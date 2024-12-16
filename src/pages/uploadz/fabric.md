@@ -46,75 +46,55 @@ While vector database integration with Fabric is not something I have found yet,
 
 # Getting Started with Fabric
 
-I'm using Linux, Ubuntu 22.04 running in WSL which will work similarly on other Linux distributions but you would need to modify syntax to suit for your package manager of choice. [Instructions](https://github.com/danielmiessler/fabric?tab=readme-ov-file#setting-up-the-fabric-commands) for Mac use `brew`.
+I'm using Linux mint just now but the binary you need can be downloaded from [here](https://github.com/danielmiessler/fabric?tab=readme-ov-file#get-latest-release-binaries)
 
-I ran `which pipx` to see if I had it installed on my system
-
-```bash
-fabric on  main is 📦 v1.2.0 via 🐍 v3.10.12
-❯ which pipx
-
-fabric on  main is 📦 v1.2.0 via 🐍 v3.10.12
-```
-
-So I did not have `pipx` installed on this system, being a newly setup WSL on windows but this is to be expected as I have not used it before and it is one of the several methods out there for configuring python virtual environments that I have not used much up to now - see  [pipx](https://pipx.pypa.io/stable/) site for more info on it.
-
-I'll update / upgrade all packages to get started
-```bash
-❯ sudo apt update && sudo apt upgrade -y
-```
-
-now to install `pipx` :
+so I ran 
 
 ```bash
-❯ sudo apt install pipx -y
+curl -L https://github.com/danielmiessler/fabric/releases/latest/download/fabric-linux-amd64 > fabric && chmod +x fabric
+sudo cp fabric /usr/local/bin
+fabric --version
 ```
-
-and check it is installed :
+from [fabrics README](https://github.com/danielmiessler/fabric?tab=readme-ov-file#add-aliases-for-all-patterns) I added the following to my `~/.bashrc` and then `source ~/.bashrc` to activate this in the current session :
 
 ```bash
-❯ pipx --version
-1.0.0
+# Fabric ...
+#
+## Loop through all files in the ~/.config/fabric/patterns directory
+for pattern_file in $HOME/.config/fabric/patterns/*; do
+    # Get the base name of the file (i.e., remove the directory path)
+    pattern_name=$(basename "$pattern_file")
+
+    # Create an alias in the form: alias pattern_name="fabric --pattern pattern_name"
+    alias_command="alias $pattern_name='fabric --pattern $pattern_name'"
+
+    # Evaluate the alias command to add it to the current shell
+    eval "$alias_command"
+done
+
+yt() {
+    local video_link="$1"
+    fabric -y "$video_link" --transcript
+}
 ```
 
-which looks ok and without `--version` flag I get loads of help, which is good so, I should be able to install `fabric` if the docs are up to date at the time of me doing this first, I clone `fabric` with
-
-```bash
-https://github.com/danielmiessler/fabric.git
-```
-
-and cd into the cloned git repository with `cd fabric` so that I can next install fabric with
-
-```bash
-❯ pipx install .
-installed package fabric 1.2.0, installed using Python 3.10.12
-These apps are now globally available
-	- fabric
-	- fabric-api
-	- fabric-webui
-	- save
-	- ts
-	- yt
-⚠️  Note: '/home/jon/.local/bin' is not on your PATH environment variable. These apps will not be globally accessible until your
-	PATH is updated. Run `pipx ensurepath` to automatically add it, or manually modify your PATH in your shell's config file (i.e.
-	~/.bashrc).
-done! ✨ 🌟 ✨
-```
-
-I subsequently added the line `export PATH=/home/jon/.local/bin:$PATH` to my `~/.bashrc` file and then ran `source ~/.bashrc` to activate this in my current shell. I was able to see `fabric` in my path
-
-```bash
-❯ which fabric
-/home/jon/.local/bin/fabric
-```
-
-which allowed me to run its setup
+to setup you just need to run
 
 ```bash
 fabric --setup
 ```
 
-This asks for a number of keys for openai, youtube which you may enter, I guess you will need at least one to make any kind of sense of this unless running local LLMs which I am not currently on this aged pavillion laptop but I will revisit the exercise on something more capable at a later date. I also chose to `sudo apt install ffmpeg` as when I ran `fabric` it looked for this and found it missing, again, likely the case as this is a newly setup linux and I have not had a requirement to add this up to now
+and pick and run each of the following items untill all are configured
+
+* Default AI Vendor and Model [required] (configured)
+* Patterns - Downloads patterns [required] (configured)
+* YouTube - to grab video transcripts and comments (configured)
+
+if your intered to know what model I used it was Gemini an its latest beta version but an API key will allow you to choose which one to use
+
+youtube I also configured with an API token I set up already
+
+
 
 I can now run `fabric`
 
@@ -135,7 +115,7 @@ The main thing is that there are no errors so I am a happy camper. Now, I'd like
 this is how `yt` a part of `fabric` can be used in a command line pipe to get a summary without having to watch the video :
 
 ```bash
-yt --transcript https://www.youtube.com/watch?v=3ODP6tTpjqA | fabric --stream --pattern extract_wisdom
+yt https://www.youtube.com/watch?v=3ODP6tTpjqA | fabric --stream --pattern extract_wisdom
 ```
 
 and here follows the formatted markdown that this outputs to standard out :
