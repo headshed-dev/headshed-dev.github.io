@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
+    "clear-down-missives": "rm -f ../src/content/missivz/*",
     "copy-images": "mkdir -p ../public/assets/images && dotenv -e ../.env -- sh -c 'cp -r ${LARAVEL_IMAGES}/* ../public/assets/images/'",
-    "start": "npm run copy-images && dotenv -e ../.env -- sh -c 'node app.js'",
+    "start": "npm run clear-down-missives && npm run copy-images && dotenv -e ../.env -- sh -c 'node app.js'",
     "test-env": "npm run import-laravel-images && npm run import-laravel-data",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

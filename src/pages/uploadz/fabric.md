@@ -5,7 +5,7 @@ image: shiny04.jpg
 created: 2024-06-07
 updated: 2024-12-17
 author: "Jon Brookes"
-tags: ["python", "LLms"]
+tags: ["fabric", "prompt-engineering", "LLms"]
 description: "The Rise of Prompt Engineering and how Fabric Makes it Easy"
 keywords: "python, LLM, pipx, AI"
 ---

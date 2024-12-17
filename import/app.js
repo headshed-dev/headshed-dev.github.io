@@ -10,7 +10,7 @@ const parseBlogRecords = (blogRecords) => {
     blogRecords.forEach(record => {
         const slug = record.slug;
         const newPageFilePath = `../src/content/missivz/${slug}.md`;
-        const updated_at = record.updated_at;
+        const updated_at = record.blog_date
         const publishedDate = new Date(updated_at).toLocaleDateString('en-US', {
             month: '2-digit',
             day: '2-digit',
@@ -35,7 +35,7 @@ const parseBlogRecords = (blogRecords) => {
         newBlogPage = `---
 ${headMatterYaml}
 ---
-${record.content}
+${record.markdown}
 `
         console.log(`path: ${newPageFilePath}`);
 
@@ -59,6 +59,7 @@ ${record.content}
  * Read the blog records from the JSON file.
  */
 
+console.log(`reading blog records from: ${blogRecordDataPath}`);    
 
 fs.readFile(blogRecordDataPath, 'utf8', (err, data) => {
     if (err) {
