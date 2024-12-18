@@ -5,9 +5,64 @@ const laravelExportedData = process.env.LARAVEL_EXPORTED_DATA;
 const defaultAuthor = process.env.DEFAULT_AUTHOR;
 const blogRecordDataPath = `${laravelExportedData}/blog_records/blog_records.json`;
 
+
+const parseArticleRecords = (articleRecords) => {
+    console.log(`found this number of article records: ${articleRecords.length}`);
+
+
+    articleRecords.forEach(record => {
+
+        // console.log(record);
+
+
+        const headMatter = {
+            layout: "../../layouts/CustomMarkdown.astro",
+            title: record.title,
+            image: `assets/${record.image}`,
+            created: record.created_at,
+            updated: record.updated_at,
+            author: defaultAuthor,
+            tags: record.tags,
+            description: record.description,
+            keywords: record.keywords,
+        }
+        // console.log(headMatter);
+        
+        const headMatterYaml = yaml.dump(headMatter, { flowLevel: -1 });
+
+        newArticlePage = `---
+${headMatterYaml}
+---
+${record.markdown}
+`
+        console.log(newArticlePage);
+
+        
+        // src/pages/uploadz/astro-static-site-generator.md
+
+        const articleFilePath = "../src/pages/uploadz/" + record.slug + ".md";
+
+        try {
+            fs.writeFileSync(articleFilePath, newArticlePage);
+            console.log(`Successfully wrote file: ${articleFilePath}`);
+        } catch (err) {
+            console.error(`Error writing file: ${err}`);
+        }
+
+
+
+
+
+
+    });
+}
+
 const parseBlogRecords = (blogRecords) => {
+
     console.log(`found this number of blog records: ${blogRecords.length}`);
+    
     blogRecords.forEach(record => {
+        
         const slug = record.slug;
         const newPageFilePath = `../src/content/missivz/${slug}.md`;
         const updated_at = record.blog_date
@@ -16,8 +71,6 @@ const parseBlogRecords = (blogRecords) => {
             day: '2-digit',
             year: 'numeric'
         }).replace(/\//g, '-');
-
-        console.log(`publishedDate: ${publishedDate}`);
 
         const headMatter = {
             title: record.title,
@@ -66,8 +119,16 @@ fs.readFile(blogRecordDataPath, 'utf8', (err, data) => {
         console.error(`Error reading file from disk: ${err}`);
     } else {
         try {
-            const blogRecords = JSON.parse(data);
+            const records = JSON.parse(data);
+            
+            const pageRecords = records.filter(record => record.category === "Article");
+            const blogRecords = records.filter(record => record.category === "Default");
+
+
             parseBlogRecords(blogRecords);
+            parseArticleRecords(pageRecords);
+
+
         } catch (err) {
             console.error(`Error parsing JSON string: ${err}`);
         }

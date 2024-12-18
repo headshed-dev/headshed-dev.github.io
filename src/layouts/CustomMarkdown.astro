@@ -9,7 +9,8 @@ import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import BlogPostingJSONLD from "../components/BlogPostingJSONLD.astro";
 
-const imgPath = `/images/${content.image}`;
+const imgPath = `/${content.image}`;
+console.log(imgPath);
 
 import data from "../data/site.json";
 ---
@@ -143,11 +144,14 @@ import data from "../data/site.json";
             )
           }
         </div>
+        <!--
         <img
           src={imgPath}
           alt="featured image"
           class="w-2/3 rounded-lg pb-10 mx-auto"
-        />
+          />
+        -->
+
         <div class="flex flex-col justify-center">
           <div
             class="prose dark:prose-invert
