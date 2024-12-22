@@ -35,7 +35,7 @@ ${headMatterYaml}
 ---
 ${record.markdown}
 `
-        console.log(newArticlePage);
+        // console.log(newArticlePage);
 
         
         // src/pages/uploadz/astro-static-site-generator.md
