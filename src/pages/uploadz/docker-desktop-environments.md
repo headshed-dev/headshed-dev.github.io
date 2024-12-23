@@ -1,14 +1,20 @@
 ---
-layout: "../../layouts/CustomMarkdown.astro"
-title: "Get going with Docker Containers"
-image: "container.webp"
-created: 2023-12-22
-updated: 2023-12-26
-author: "Jon Brookes"
-tags: ["docker", "containers"]
-description: "install a containerised application in which we may store information, notes, knowledge base, etc. but this will be for our own, private and local use "
-keywords: "docker, containers"
+layout: ../../layouts/CustomMarkdown.astro
+title: Get going with Docker Containers
+image: assets/images/01JFQPPZ9FF3J5AB4F6DVY3DV3.webp
+created: '2024-12-22T17:29:05.000000Z'
+updated: '2024-12-22T17:30:19.000000Z'
+author: Jon Brookes
+tags:
+  - docker
+  - containers
+description: >-
+  install a containerised application in which we may store information, notes,
+  knowledge base, etc. but this will be for our own, private and local use
+keywords: docker, containers
+
 ---
+![](/assets/images/01JFQPMPXA796RVGZ62HSZ52QD.webp)
 
 # TL;DR
 

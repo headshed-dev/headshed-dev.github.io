@@ -1,14 +1,21 @@
 ---
-layout: "../../layouts/CustomMarkdown.astro"
-title: "Build a Second Brain"
-image: "robot-head03.webp"
-created: 2023-12-26
-updated: 2023-12-26
-author: "Jon Brookes"
-tags: ["second-brain", "logseq"]
-description: "logseq is a local-first, non-linear, outliner notebook for organizing and sharing your personal knowledge base and an excellent way to build a second brain"
-keywords: "second brain, logseq, knowledge base, journal, notes, ideas, thoughts, tldr"
+layout: ../../layouts/CustomMarkdown.astro
+title: Build a Second Brain
+image: assets/images/01JFQPC3VG4SJN8RTFJR43P3PP.webp
+created: '2024-12-22T17:23:30.000000Z'
+updated: '2024-12-22T17:24:23.000000Z'
+author: Jon Brookes
+tags:
+  - second-brain
+  - logseq
+description: >-
+  logseq is a local-first, non-linear, outliner notebook for organizing and
+  sharing your personal knowledge base and an excellent way to build a second
+  brain
+keywords: second brain, logseq, knowledge base, journal, notes, ideas, thoughts
+
 ---
+![](/assets/images/01JFQPAFXH04EAM1MDVGFMM41S.webp)
 
 # TL;DR
 

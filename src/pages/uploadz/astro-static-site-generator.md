@@ -1,16 +1,31 @@
 ---
-layout: "../../layouts/CustomMarkdown.astro"
-title: "Astro Static Site Generator"
-image: astro-saucer.webp
-created: 2023-12-23
-updated: 2023-12-26
-author: "Jon Brookes"
-tags: ["astro", "static-sites"]
-description: "Astro is a relatively new static site generator. It has its own approach to building static sites and has a component based approach that is similar to React."
-keywords: "astro, static site generator, ssg, react, svelte, vue, gatsby, nextjs, nuxtjs, sapper, sveltekit, vite, snowpack, webpack, tailwind, tailwindcss, tailwindui, tailblocks, tailwindcomponents, tailwindtoolbox, tailwindtemplates, tailwindstarterkit, tailwindadmin"
+layout: ../../layouts/CustomMarkdown.astro
+title: Astro Static Site Generator
+image: assets/images/01JFARPNWY0PB9XYSZ538A6NX9.webp
+created: '2024-12-17T16:53:06.000000Z'
+updated: '2024-12-17T18:17:00.000000Z'
+author: Jon Brookes
+tags:
+  - bing
+  - bong
+  - boo
+  - bar
+description: >-
+  Astro is a relatively new static site generator. It has its own approach to
+  building static sites and has a component based approach that is similar to
+  React.
+keywords: >-
+  astro, static site generator, ssg, react, svelte, vue, gatsby, nextjs, nuxtjs,
+  sapper, sveltekit, vite, snowpack, webpack, tailwind, tailwindcss, tailwindui,
+  tailblocks, tailwindcomponents, tailwindtoolbox, tailwindtemplates,
+  tailwindstarterkit, tailwindadmin
+
 ---
+![](/assets/images/fYUzJZ4fwkRechazRcFMoMD5eFOE0nVDeddb6PDq.webp)
 
 # TL;DR
+
+Im forevr blowing bubbles ...
 
 Having `node.js` installed, you can get started with Astro as simply as :
 

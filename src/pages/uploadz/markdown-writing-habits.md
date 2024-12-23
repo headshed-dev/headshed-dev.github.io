@@ -1,14 +1,20 @@
 ---
-layout: "../../layouts/CustomMarkdown.astro"
-title: "Get writing with Markdown"
-image: "keyboard01.jpeg"
-created: 2023-12-20
-updated: 2023-12-22
-author: "Jon Brookes"
-tags: ["markdown", "writing"]
-description: "Markdown is a simple markup language that allows you to write plain text that can be converted to HTML. It's a great way to write notes, journals, and posts."
-keywords: "markdown, writing, journal, notes, blog"
+layout: ../../layouts/CustomMarkdown.astro
+title: Get writing with Markdown
+image: assets/images/01JFQP1A4B8E732YQ1BQ09M21J.webp
+created: '2024-12-22T17:17:06.000000Z'
+updated: '2024-12-22T17:18:29.000000Z'
+author: Jon Brookes
+tags:
+  - markddown
+  - writing
+description: >-
+  Markdown is a simple markup language that allows you to write plain text that
+  can be converted to HTML. It's a great way to write notes, journals, and posts
+keywords: markdown, writing, journal, notes, blog
+
 ---
+![](/assets/images/01JFQNYSBMYFZCA43G6VB2GXCF.webp)
 
 # TLDR
 
@@ -70,4 +76,5 @@ Polish with AI. Paste your draft into Bard. It'll fix typos, tighten up the pros
 Review and add your magic. Read Bard's edits, and feel free to put your own spin on things.
 
 Remember, consistency is key. So pick up your pen, embrace the messy first draft, and let the words flow!
+
 

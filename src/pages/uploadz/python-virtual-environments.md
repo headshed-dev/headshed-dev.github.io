@@ -1,15 +1,21 @@
 ---
-layout: "../../layouts/CustomMarkdown.astro"
-title: "python virtual environments"
-image: python03.webp
-created: 2023-12-19
-updated: 2023-01-01
-author: "Jon Brookes"
-tags: ["python", "devops"]
-description: "Python virtual environments isolate projects, letting you use different Python versions and packages without conflicts"
-keywords: "python, virtualenv, venv, docker, vscode"
----
+layout: ../../layouts/CustomMarkdown.astro
+title: Python virtual environments
+image: assets/images/01JFQNMRYGT28D3SXDP4A3QKP9.webp
+created: '2024-12-22T17:10:32.000000Z'
+updated: '2024-12-22T17:11:38.000000Z'
+author: Jon Brookes
+tags:
+  - python
+  - venv
+  - virtualenv
+description: >-
+  Python virtual environments isolate projects, letting you use different Python
+  versions and packages without conflicts
+keywords: python, virtualenv, venv, docker, vscode
 
+---
+![](/assets/images/01JFQNJR8TN2CC1VJG0WQJB684.webp)
 # TL;DR
 
 Within Linux, you can create a virtual environment with as little as:
@@ -236,4 +242,5 @@ which removes the path name of your current environment from your system command
 # Conclusion
 
 Whichever method you choose to virtualize Python environments, it is important to be able to reproduce your environment for your project. This is important for development and for deployment. There is currently no 'one size fits all' solution and having an awareness of more than one approach to virtualizing Python environments will be necessary when working on different projects and for different clients.
+
 

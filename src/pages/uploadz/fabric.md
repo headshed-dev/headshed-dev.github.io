@@ -1,14 +1,19 @@
 ---
-layout: "../../layouts/CustomMarkdown.astro"
-title: "The Rise of Prompt Engineering and how Fabric Makes it Easy"
-image: shiny04.jpg
-created: 2024-06-07
-updated: 2024-12-17
-author: "Jon Brookes"
-tags: ["fabric", "prompt-engineering", "LLms"]
-description: "The Rise of Prompt Engineering and how Fabric Makes it Easy"
-keywords: "python, LLM, pipx, AI"
+layout: ../../layouts/CustomMarkdown.astro
+title: The Rise of Prompt Engineering and how Fabric Makes it Easy
+image: assets/images/01JFQN4201J2ZD7RW0AN0ZCS51.jpg
+created: '2024-12-22T16:55:39.000000Z'
+updated: '2024-12-22T17:02:30.000000Z'
+author: Jon Brookes
+tags:
+  - LLMs
+  - AI
+  - Fabric
+description: The Rise of Prompt Engineering and how Fabric Makes it Easy
+keywords: LLMs, AI, Fabric
+
 ---
+![](/assets/images/01JFQMQGAMA19S5ZM737NXPKYZ.jpg)
 
 # TL;DR
 
@@ -323,3 +328,4 @@ yt --transcript https://www.youtube.com/watch?v=3ODP6tTpjqA | fabric --stream --
 # Conclusion
 
 Fabric offers a compelling solution for those seeking to leverage the power of prompt engineering. Its user-friendly interface and pre-built prompts make it accessible for anyone, while its command-line structure caters specifically to developers. By simplifying prompt creation and management, Fabric empowers users to unlock the potential of large language models for various tasks, including content creation, document analysis, and information extraction from multimedia sources like YouTube videos. As the field of AI continues to evolve, Fabric positions itself as a valuable tool for maximizing the effectiveness of large language models and their interactions with human users.
+

@@ -32,3 +32,4 @@ firebase/*
 public/assets/images
 src/content/missivz/redis-now-closed-source.md src/content/missivz/yet-another-test.md
 src/content/missivz
+src/pages/uploadz/

@@ -1,15 +1,23 @@
 ---
-layout: "../../layouts/CustomMarkdown.astro"
-title: "Conquer your fear of the command line"
-image: "frightened-robot.webp"
-created: 2023-12-22
-updated: 2023-12-22
-author: "Jon Brookes"
-tags: ["cli", "bash"]
-description: "The once-ubiquitous command prompt faded from the forefront of personal computing, leaving many technology workers working to regain direct access to its power"
-keywords: "command line, cli, shell, bash, zsh, powershell, wsl, windows, linux, mac, docker, vscode"
----
+layout: ../../layouts/CustomMarkdown.astro
+title: Conquer your fear of the command line
+image: assets/images/01JFQN5K4NC4PSM9DZWWQP0KWX.webp
+created: '2024-12-22T16:37:42.000000Z'
+updated: '2024-12-22T17:03:21.000000Z'
+author: Jon Brookes
+tags:
+  - cli
+  - bash
+description: >-
+  The once-ubiquitous command prompt faded from the forefront of personal
+  computing, leaving many technology workers working to regain direct access to
+  its power
+keywords: >-
+  command line, cli, shell, bash, zsh, powershell, wsl, windows, linux, mac,
+  docker, vscode
 
+---
+![](/assets/images/01JFQKPMWTNB7P6TBJBFEH2HNN.webp)
 # TL;DR
 
 On windows :
