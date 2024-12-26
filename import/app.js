@@ -27,7 +27,7 @@ const parseArticleRecords = (articleRecords) => {
             keywords: record.keywords,
         }
         // console.log(headMatter);
-        
+
         const headMatterYaml = yaml.dump(headMatter, { flowLevel: -1 });
 
         newArticlePage = `---
@@ -37,7 +37,7 @@ ${record.markdown}
 `
         // console.log(newArticlePage);
 
-        
+
         // src/pages/uploadz/astro-static-site-generator.md
 
         const articleFilePath = "../src/pages/uploadz/" + record.slug + ".md";
@@ -60,9 +60,9 @@ ${record.markdown}
 const parseBlogRecords = (blogRecords) => {
 
     console.log(`found this number of blog records: ${blogRecords.length}`);
-    
+
     blogRecords.forEach(record => {
-        
+
         const slug = record.slug;
         const newPageFilePath = `../src/content/missivz/${slug}.md`;
         const updated_at = record.updated_at;
@@ -79,7 +79,7 @@ const parseBlogRecords = (blogRecords) => {
             publishedDate: publishedDate,
             tags: [
                 "missivz",
-              ],
+            ],
             image: record.image,
             canonicalURL: "https://headshed.dev"
         }
@@ -112,7 +112,7 @@ ${record.markdown}
  * Read the blog records from the JSON file.
  */
 
-console.log(`reading blog records from: ${blogRecordDataPath}`);    
+console.log(`reading blog records from: ${blogRecordDataPath}`);
 
 fs.readFile(blogRecordDataPath, 'utf8', (err, data) => {
     if (err) {
@@ -120,9 +120,12 @@ fs.readFile(blogRecordDataPath, 'utf8', (err, data) => {
     } else {
         try {
             const records = JSON.parse(data);
-            
-            const pageRecords = records.filter(record => record.category === "Article");
-            const blogRecords = records.filter(record => record.category === "Default");
+            const pageRecords = records.filter(record => {
+                return record.category === "Article" && record.published;
+            });
+            const blogRecords = records.filter(record => {
+                return record.category === "Default" && record.published;
+            });
 
 
             parseBlogRecords(blogRecords);
