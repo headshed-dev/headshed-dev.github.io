@@ -112,6 +112,7 @@ ${record.markdown}
  * Read the blog records from the JSON file.
  */
 
+
 console.log(`reading blog records from: ${blogRecordDataPath}`);
 
 fs.readFile(blogRecordDataPath, 'utf8', (err, data) => {
