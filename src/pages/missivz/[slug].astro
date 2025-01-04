@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
+import LayoutOG from "../../layouts/LayoutOG.astro";
 import HeaderSmall from "../../components/HeaderSmall.astro";
 import { formatDate } from '../../utills/tools';
 
@@ -15,10 +15,16 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+let imagePath = "/images/waving_sm.png";
+if (entry.data.image) {
+  imagePath = `/${entry.data.image}`;
+}
+
+
 
 ---
 
-<Layout title={entry.data.title}>
+<LayoutOG title={entry.data.title} image={imagePath}>
   <div class="text-center">
     <HeaderSmall title={entry.data.title} subtitle={entry.data.author} />
     <p class="text-gray-700 dark:text-gray-400">{formatDate(entry.data.publishedDate.toString())}</p>
