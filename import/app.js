@@ -65,8 +65,8 @@ const parseBlogRecords = (blogRecords) => {
 
         const slug = record.slug;
         const newPageFilePath = `../src/content/missivz/${slug}.md`;
-        const updated_at = record.updated_at;
-        const publishedDate = new Date(updated_at).toLocaleDateString('en-US', {
+        const blogDate = record.blog_date;
+        const publishedDate = new Date(blogDate).toLocaleDateString('en-US', {
             month: '2-digit',
             day: '2-digit',
             year: 'numeric'
