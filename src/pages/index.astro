@@ -4,10 +4,17 @@ import CTAHeadshed from "../components/CTAHeadshed.astro";
 import FeatureList from "../components/FeatureList.astro";
 
 import data from "../data/site.json";
+import LayoutLanding from "../layouts/LayoutLanding.astro";
 ---
 
-<Layout title={data.siteName}>
+<LayoutLanding title={data.siteName}>
   <main>
+
+
+   
+
+
+
     <CTAHeadshed />
     <FeatureList />
   </main>

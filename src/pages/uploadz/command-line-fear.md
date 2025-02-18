@@ -4,7 +4,7 @@ title: Conquer your fear of the command line
 image: assets/images/01JFQN5K4NC4PSM9DZWWQP0KWX.webp
 created: '2024-12-22T16:37:42.000000Z'
 updated: '2024-12-22T17:03:21.000000Z'
-author: Jon Brookes
+author: jon brookes
 tags:
   - cli
   - bash

@@ -4,7 +4,7 @@ title: Python virtual environments
 image: assets/images/01JFQNMRYGT28D3SXDP4A3QKP9.webp
 created: '2024-12-22T17:10:32.000000Z'
 updated: '2024-12-22T17:11:38.000000Z'
-author: Jon Brookes
+author: jon brookes
 tags:
   - python
   - venv

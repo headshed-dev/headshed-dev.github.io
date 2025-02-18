@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import HeaderSmall from "../components/HeaderSmall.astro";
+import Form from "../components/Form.astro";
+const title = "Waitlist";
+const subtitle = "Subscribe now to be first to launch share-lt";
+---
+
+<Layout title="Subscribe">
+  <div>
+    <HeaderSmall title={title} subtitle={subtitle} />
+  </div>
+  <main>
+    <div class="max-w-md m-auto my-8">
+      <Form />
+    </div>
+  </main>
+</Layout>
+
+<style></style>

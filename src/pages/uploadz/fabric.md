@@ -4,7 +4,7 @@ title: The Rise of Prompt Engineering and how Fabric Makes it Easy
 image: assets/images/01JFQN4201J2ZD7RW0AN0ZCS51.jpg
 created: '2024-12-22T16:55:39.000000Z'
 updated: '2024-12-22T17:02:30.000000Z'
-author: Jon Brookes
+author: jon brookes
 tags:
   - LLMs
   - AI

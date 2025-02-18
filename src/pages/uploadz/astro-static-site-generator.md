@@ -4,7 +4,7 @@ title: Astro Static Site Generator
 image: assets/images/01JFARPNWY0PB9XYSZ538A6NX9.webp
 created: '2024-12-17T16:53:06.000000Z'
 updated: '2024-12-17T18:17:00.000000Z'
-author: Jon Brookes
+author: jon brookes
 tags:
   - bing
   - bong

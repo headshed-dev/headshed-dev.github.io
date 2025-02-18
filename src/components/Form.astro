@@ -1,15 +1,47 @@
 ---
 import Button from '../components/Button.astro';
 ---
-<form>
+
+
+<form method="post" action="https://lst.headshed.dev/subscription/form" class="listmonk-form">
+  <div>
+
     <div class="mb-6">
-      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-      <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required>
-    </div>
+
+    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Subscribe</label>
+
+
+
+    <input type="hidden" name="nonce" />
+
+    <input type="email" name="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="E-mail" required>
+
+</div>
+
+
+<div class="mb-6">
+  <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Name</label>
+
+  <input name="name" type="text" id="message" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Name (optional)" >
+</div>
+
+
+
+
+
     <div class="mb-6">
-      <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Message</label>
-      <input type="text" id="message" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+      <input id="8e01f" type="checkbox" name="l" checked value="8e01fae0-0989-4972-9913-f4bd65bdfdad" />
+      <label for="8e01f">headshed-dev/share-lt</label>
     </div>
-    <Button text="Send" />
-  </form>
+
+
+
+
+
+    <input class="text-white bg-blue-600 focus:outline-none cursor-pointer focus:ring-4 focus:ring-secondary font-medium rounded-full text-lg px-10 py-4 text-center" type="submit" value="Subscribe " />
+  </div>
+</form>
+
+
+
   
