@@ -1,7 +1,6 @@
 ---
 const title = "Uploadz";
-const subtitle =
-  "Web development, programming, and tech used to establish a Personal Digital AI prescence";
+const subtitle = "Web development, programming, and tech uploadz";
 
 import Layout from "../../layouts/Layout.astro";
 
@@ -29,7 +28,6 @@ type Props = {
               data.articles.map(
                 (
                   value: {
-                    
                     projectTitle: string;
                     href: string;
                     about: string;
@@ -37,7 +35,7 @@ type Props = {
                     type?: string;
                     featuredImage: string;
                   },
-                  index: number
+                  index: number,
                 ) => {
                   return (
                     <ProjectCard
@@ -49,7 +47,7 @@ type Props = {
                       featuredImage={value.featuredImage}
                     />
                   );
-                }
+                },
               )
             }
           </div>

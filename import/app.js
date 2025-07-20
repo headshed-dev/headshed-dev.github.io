@@ -3,6 +3,22 @@ const yaml = require('js-yaml');
 const laravelExportedData = process.env.LARAVEL_EXPORTED_DATA;
 // const laravelImageData = process.env.LARAVEL_IMAGES;
 const defaultAuthor = process.env.DEFAULT_AUTHOR;
+
+console.log(`default author: ${defaultAuthor}`);
+console.log(`default author: ${defaultAuthor}`);
+console.log(`default author: ${defaultAuthor}`);
+console.log(`default author: ${defaultAuthor}`);
+console.log(`default author: ${defaultAuthor}`);
+console.log(`default author: ${defaultAuthor}`);
+console.log(`default author: ${defaultAuthor}`);
+console.log(`default author: ${defaultAuthor}`);
+console.log(`default author: ${defaultAuthor}`);
+console.log(`default author: ${defaultAuthor}`);
+console.log(`default author: ${defaultAuthor}`);
+console.log(`default author: ${defaultAuthor}`);
+console.log(`default author: ${defaultAuthor}`);
+console.log(`default author: ${defaultAuthor}`);
+
 const blogRecordDataPath = `${laravelExportedData}/blog_records/blog_records.json`;
 
 

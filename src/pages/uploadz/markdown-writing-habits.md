@@ -4,7 +4,7 @@ title: Get writing with Markdown
 image: assets/images/01JFQP1A4B8E732YQ1BQ09M21J.webp
 created: '2024-12-22T17:17:06.000000Z'
 updated: '2024-12-22T17:18:29.000000Z'
-author: jon brookes
+author: Jon Brookes
 tags:
   - markddown
   - writing

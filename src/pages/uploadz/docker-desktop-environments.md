@@ -4,7 +4,7 @@ title: Get going with Docker Containers
 image: assets/images/01JFQPPZ9FF3J5AB4F6DVY3DV3.webp
 created: '2024-12-22T17:29:05.000000Z'
 updated: '2024-12-22T17:30:19.000000Z'
-author: jon brookes
+author: Jon Brookes
 tags:
   - docker
   - containers

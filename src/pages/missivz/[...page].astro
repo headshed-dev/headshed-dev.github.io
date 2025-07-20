@@ -3,41 +3,34 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import HeaderSmall from "../../components/HeaderSmall.astro";
 import { Image } from "astro:assets";
-import { formatDate } from '../../utills/tools';
+import { formatDate } from "../../utills/tools";
 
-import robotImg from "../../images/journal02.webp";
+import thoughtsInTime from "../../images/pexels-norbert-kundrak-764171-3625023.jpg";
 
 import Pagination from "../../components/Pagination.astro";
 
 export async function getStaticPaths({ paginate }: { paginate: any }) {
 	const blogPosts = await getCollection("missivz");
-	
+
 	// Sort blogPosts by date
 	blogPosts.sort((a, b) => {
-	  const dateA = new Date(a.data.publishedDate);
-	  const dateB = new Date(b.data.publishedDate);
-	
-	  if (!isNaN(dateA.getTime()) && !isNaN(dateB.getTime())) {
-		return dateB.getTime() - dateA.getTime();
-	  } else {
-		return 0;
-	  }
+		const dateA = new Date(a.data.publishedDate);
+		const dateB = new Date(b.data.publishedDate);
+
+		if (!isNaN(dateA.getTime()) && !isNaN(dateB.getTime())) {
+			return dateB.getTime() - dateA.getTime();
+		} else {
+			return 0;
+		}
 	});
 
-	return paginate(
-		blogPosts, {
-			pageSize: 3,
+	return paginate(blogPosts, {
+		pageSize: 3,
 	});
-
 }
-
 
 const props = Astro.props as any;
 const page = props.page;
-
-
-
-
 ---
 
 <Layout title="Missivz">
@@ -45,29 +38,25 @@ const page = props.page;
 		<HeaderSmall title="Missivz" subtitle="thoughts in time" />
 	</div>
 	<Image
-		width="400"
-		height="400"
 		class="rounded mx-auto mt-6"
-		src={robotImg}
-		alt="wee happy robot waving"
+		src={thoughtsInTime}
+		alt="Photo by Norbert Kundrak: https://www.pexels.com/photo/man-in-gray-shirt-looking-at-city-buildings-3625023/"
 	/>
 	<div class="mt-8 mb-10">
 		{
 			page.data.map((post: any) => (
-				
 				<a href={`/missivz/${post.slug}`}>
 					<HeaderSmall
 						title={post.data.title}
 						subtitle={post.data.author}
 					/>
-					<p class="text-center text-gray-700 dark:text-gray-400">{formatDate(post.data.publishedDate.toString())}</p>
-
+					<p class="text-center text-gray-700 dark:text-gray-400">
+						{formatDate(post.data.publishedDate.toString())}
+					</p>
 				</a>
 			))
 		}
-	</div>   
-
-
+	</div>
 
 	<Pagination prevURL={page.url.prev} nextURL={page.url.next} />
 </Layout>

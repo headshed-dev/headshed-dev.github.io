@@ -4,7 +4,7 @@ title: Build a Second Brain
 image: assets/images/01JFQPC3VG4SJN8RTFJR43P3PP.webp
 created: '2024-12-22T17:23:30.000000Z'
 updated: '2024-12-22T17:24:23.000000Z'
-author: jon brookes
+author: Jon Brookes
 tags:
   - second-brain
   - logseq
