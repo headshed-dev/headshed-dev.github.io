@@ -106,9 +106,12 @@ console.log(Astro.props.title);
     <div class="bg-stone-100 dark:bg-slate-800 min-h-screen mb-0">
       <!-- <Nav class="fixed top-0 w-full z-50" /> -->
       <Nav />
-      <div class="container max-w-4xl">
+
+      <div class="flex flex-col min-h-screen">
         <slot />
-        <Footer />
+        <div class="container max-w-4xl">
+          <Footer />
+        </div>
       </div>
     </div>
     <style>
